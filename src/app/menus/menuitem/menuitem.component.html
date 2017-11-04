@@ -1,0 +1,7 @@
+<div class="menu-item"
+     [routerLink]="item.route"
+     [ngClass]="{'vertical-menu': menuService.isVertical}"
+     routerLinkActive="router-link-active"
+     (click)="menuService.showingLeftSideMenu = false">
+  <span>{{ item.text.toUpperCase() }}</span>
+</div>

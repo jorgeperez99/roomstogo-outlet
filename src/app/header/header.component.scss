@@ -1,0 +1,91 @@
+@import "../../assets/styles/variables";
+@import "../../assets/linearicons/style.css";
+
+header {
+  background-color: white;
+}
+
+
+
+
+.switch-site {
+  background: $color-blue;
+  height: 40px;
+  @include media-up-to(sm) {
+    height: 28px;
+    text-align: center;
+  }
+  div {
+    height: 100%;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    li {
+      display: inline-block;
+      width: 160px;
+      font-size: 14px;
+      height: 100%;
+      background: $color-navy;
+      margin-right: 5px;
+      overflow: hidden;
+      text-align: center;
+      padding-top: 10px;
+      font-weight: 600;
+      text-decoration: none;
+
+      @include media-up-to(sm) {
+        width: 100px;
+        background-color: transparent;
+        padding-top: 5px;
+        font-size: 13px;
+        text-decoration: underline;
+        font-weight: 200;
+      }
+
+      a {
+        color: $color-white;
+      }
+
+      &.active {
+        background: $color-white;
+        color: $color-blue;
+        a {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+}
+
+.logo-row {
+  border-bottom: $divider-border-lightgray;
+  border-top: $divider-border-lightgray;
+  .logo-pane {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include media-up-to(sm) {
+      text-align: center;
+    }
+
+    img {
+      @include media-up-to(sm) {
+        width: 135px;
+      }
+    }
+  }
+}
+
+
+.hamburger {
+  font-weight: 600;
+  font-size: 30px;
+  color: $color-navy;
+  text-align: center;
+  padding-top: 17px;
+}
+

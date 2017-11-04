@@ -1,0 +1,116 @@
+[
+  {
+    "text": "Living Room",
+    "icon": "glyphicon-dashboard",
+    "route": "dashboard",
+    "submenu": [
+      {
+        "text": "Sofas",
+        "icon": "glyphicon-dashboard",
+        "route": "dashboard",
+        "submenu": null
+      },
+      {
+        "text": "Sleeper Sofas",
+        "icon": "glyphicon-flag",
+        "route": "",
+        "submenu": null
+      }
+    ]
+  },
+  {
+    "text": "Dining Room",
+    "icon": "glyphicon-dashboard",
+    "route": "dashboard",
+    "submenu": [
+      {
+        "text": "Dining Room Sets",
+        "icon": "glyphicon-dashboard",
+        "route": "dashboard",
+        "submenu": null
+      },
+      {
+        "text": "Tables",
+        "icon": "glyphicon-flag",
+        "route": "",
+        "submenu": null
+      }
+    ]
+  },
+  {
+    "text": "Bed Room",
+    "icon": "glyphicon-dashboard",
+    "route": "dashboard",
+    "submenu": [
+      {
+        "text": "Bed Rooms Sets",
+        "icon": "glyphicon-dashboard",
+        "route": "dashboard",
+        "submenu": null
+      },
+      {
+        "text": "Queen Bed Room Sets",
+        "icon": "glyphicon-flag",
+        "route": "",
+        "submenu": null
+      }
+    ]
+  },
+  {
+    "text": "Leather",
+    "icon": "glyphicon-dashboard",
+    "route": "dashboard",
+    "submenu": [
+      {
+        "text": "Leather Sofas",
+        "icon": "glyphicon-dashboard",
+        "route": "dashboard",
+        "submenu": null
+      },
+      {
+        "text": "Leather Love Seats",
+        "icon": "glyphicon-flag",
+        "route": "",
+        "submenu": null
+      }
+    ]
+  },
+  {
+    "text": "Matress",
+    "icon": "glyphicon-dashboard",
+    "route": "dashboard",
+    "submenu": [
+      {
+        "text": "Queen",
+        "icon": "glyphicon-dashboard",
+        "route": "dashboard",
+        "submenu": null
+      },
+      {
+        "text": "King",
+        "icon": "glyphicon-flag",
+        "route": "",
+        "submenu": null
+      }
+    ]
+  },
+  {
+    "text": "Home Decor",
+    "icon": "glyphicon-dashboard",
+    "route": "dashboard",
+    "submenu": [
+      {
+        "text": "Lamps",
+        "icon": "glyphicon-dashboard",
+        "route": "dashboard",
+        "submenu": null
+      },
+      {
+        "text": "Rugs",
+        "icon": "glyphicon-flag",
+        "route": "",
+        "submenu": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+@import "../../../assets/styles/variables";
+
+:host {
+  display: inline-block;
+}
+
+:host(.vertical-menu){
+  display: inline-block;
+  width: 100%;
+  bottom: 0;
+  top: 100px;
+  padding-left: 4px;
+  background-color: #55C;
+  overflow: auto;
+  position: absolute;
+  z-index: 999;
+  background-color: rgba(50,46,70, 0.3);
+  color: black;
+  // TODO: check .no-cssanimations test this in ie9
+  nav {
+    left: 0;
+    position: absolute;
+    width: 50%;
+    animation-duration:230ms;
+    -webkit-animation-name: move-to-left;
+    -moz-animation-name: move-to-left;
+    -o-animation-name: move-to-left;
+    animation-name: move-to-left;
+    background-color: #5555CC;
+  }
+}
+
+
+@keyframes move-to-left {
+  from {
+   left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+//.to-cross-icon {
+//  animation-duration: 3s;
+//  animation-name: hamburger-morph;
+//}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+button {
+  margin-top: 20px;
+}
+
+button.horizontal {
+  margin-left: 20px;
+  margin-bottom: 2px;
+}
