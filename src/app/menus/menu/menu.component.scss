@@ -2,6 +2,8 @@
 
 :host {
   display: inline-block;
+  flex-grow: 1;
+  align-self: flex-end;
 }
 
 :host(.vertical-menu){
@@ -40,13 +42,6 @@
   }
 }
 
-//.to-cross-icon {
-//  animation-duration: 3s;
-//  animation-name: hamburger-morph;
-//}
-
-
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -57,11 +52,3 @@ li {
   display: inline;
 }
 
-button {
-  margin-top: 20px;
-}
-
-button.horizontal {
-  margin-left: 20px;
-  margin-bottom: 2px;
-}

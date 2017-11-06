@@ -28,7 +28,7 @@ import {ScreenService} from "./services/screen.service";
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, { useHash : true })
   ],
   providers: [
     WindowRefService,

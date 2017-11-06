@@ -2,18 +2,18 @@
   {
     "text": "Living Room",
     "icon": "glyphicon-dashboard",
-    "route": "dashboard",
+    "route": null,
     "submenu": [
       {
         "text": "Sofas",
         "icon": "glyphicon-dashboard",
-        "route": "dashboard",
+        "route": "discount-living-rooms/sofas",
         "submenu": null
       },
       {
         "text": "Sleeper Sofas",
         "icon": "glyphicon-flag",
-        "route": "",
+        "route": "discount-living-rooms/sleeper-sofas",
         "submenu": null
       }
     ]
@@ -21,18 +21,18 @@
   {
     "text": "Dining Room",
     "icon": "glyphicon-dashboard",
-    "route": "dashboard",
+    "route": null,
     "submenu": [
       {
         "text": "Dining Room Sets",
         "icon": "glyphicon-dashboard",
-        "route": "dashboard",
+        "route": "discount-dining-rooms/dining-room-sets",
         "submenu": null
       },
       {
         "text": "Tables",
         "icon": "glyphicon-flag",
-        "route": "",
+        "route": "discount-dining-rooms/tables",
         "submenu": null
       }
     ]

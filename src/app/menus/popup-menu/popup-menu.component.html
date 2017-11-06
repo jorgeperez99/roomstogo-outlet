@@ -1,3 +1,9 @@
-<p>
-  popup-menu works!
-</p>
+
+<li *ngFor="let item of menu; let i = index;" >
+  <app-menu-item
+    [ngClass]="{'vertical-menu': menuService.isVertical}"
+    [item]="item"
+    [menuIndex]="i"
+    class="in-popup"
+  ></app-menu-item>
+</li>

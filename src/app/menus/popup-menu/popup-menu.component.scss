@@ -1,0 +1,11 @@
+@import "../../../assets/styles/variables.scss";
+
+:host {
+  position: absolute;
+  top: 41px;
+  width: 800px;
+  background-color: #fff;
+  border-bottom: $divider-border-lightgray;
+  border-left: $divider-border-lightgray;
+  border-right: $divider-border-lightgray;
+}

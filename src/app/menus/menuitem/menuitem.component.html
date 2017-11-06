@@ -1,7 +1,12 @@
 <div class="menu-item"
-     [routerLink]="item.route"
-     [ngClass]="{'vertical-menu': menuService.isVertical}"
-     routerLinkActive="router-link-active"
-     (click)="menuService.showingLeftSideMenu = false">
+     [ngClass]="{'vertical-menu': menuService.isVertical}">
   <span>{{ item.text.toUpperCase() }}</span>
 </div>
+<app-popup-menu
+  *ngIf="mouseInPopup || mouseInItem"
+  [menu]="item.submenu"
+  [ngClass]="{'vertical-menu': menuService.isVertical}"
+  (mouseleave)="onPopupMouseLeave($event)"
+  (mouseenter)="onPopupMouseEnter($event)"
+  [style.left.px]="popupLeftPosition"
+></app-popup-menu>

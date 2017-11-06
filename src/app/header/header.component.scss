@@ -65,14 +65,14 @@ header {
   border-bottom: $divider-border-lightgray;
   border-top: $divider-border-lightgray;
   .logo-pane {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
+    display: flex;
+    flex-wrap: wrap;
     @include media-up-to(sm) {
       text-align: center;
     }
 
     img {
+      margin: 20px 40px 10px 0;
       @include media-up-to(sm) {
         width: 135px;
       }
