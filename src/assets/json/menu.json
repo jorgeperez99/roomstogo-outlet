@@ -16,7 +16,8 @@
         "route": "discount-living-rooms/sleeper-sofas",
         "submenu": null
       }
-    ]
+    ],
+    "submenuLink": "./assets/images/livingroom.png"
   },
   {
     "text": "Dining Room",
@@ -35,7 +36,8 @@
         "route": "discount-dining-rooms/tables",
         "submenu": null
       }
-    ]
+    ],
+    "submenuLink": "./assets/images/diningroom.png"
   },
   {
     "text": "Bed Room",
@@ -54,7 +56,8 @@
         "route": "",
         "submenu": null
       }
-    ]
+    ],
+    "submenuLink": "./assets/images/bedroom.png"
   },
   {
     "text": "Leather",
@@ -73,7 +76,8 @@
         "route": "",
         "submenu": null
       }
-    ]
+    ],
+    "submenuLink": "./assets/images/leather.png"
   },
   {
     "text": "Matress",
@@ -92,7 +96,8 @@
         "route": "",
         "submenu": null
       }
-    ]
+    ],
+    "submenuLink": "./assets/images/matress.png"
   },
   {
     "text": "Home Decor",
@@ -111,6 +116,7 @@
         "route": "",
         "submenu": null
       }
-    ]
+    ],
+    "submenuLink": "./assets/images/isofa.png"
   }
 ]

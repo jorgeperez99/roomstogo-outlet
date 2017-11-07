@@ -3,4 +3,5 @@ export interface IMenuItem {
   icon: string; // glyphiicon class
   route: string;
   submenu: Array<IMenuItem>;
+  submenuLink?: string;
 }

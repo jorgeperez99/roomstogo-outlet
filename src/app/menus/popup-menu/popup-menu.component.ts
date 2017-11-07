@@ -10,6 +10,7 @@ import {IMenuItem} from '../menuitem.model';
 export class PopupMenuComponent implements OnInit {
 
   @Input() menu: Array<IMenuItem>;
+  @Input() submenuLink: string;
 
   constructor(public menuService: MenuService) { }
 

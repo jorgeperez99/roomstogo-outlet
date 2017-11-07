@@ -2,10 +2,26 @@
 
 :host {
   position: absolute;
-  top: 41px;
-  width: 800px;
+  top: 43px;
+  width: 600px;
   background-color: #fff;
   border-bottom: $divider-border-lightgray;
   border-left: $divider-border-lightgray;
   border-right: $divider-border-lightgray;
+
+  li {
+    float: left;
+    clear: both;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+
 }
+
+img {
+  float: right;
+  margin: 10px;
+}
+
