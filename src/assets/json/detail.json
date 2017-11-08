@@ -1,0 +1,74 @@
+[
+  { "routerUrl": "discount-living-rooms/sofas",
+    "content": {
+      "title": "Discount Sofas",
+      "detail": "<p>At Rooms To Go Outlet, we offer a wide variety of quality sofas at discount prices. From the clean lines and designer look of modern styles, to our more traditional selections featuring padded rolled arms and overstuffed cushions, we carry a wide range of sofas to ensure you’ll find one that will fit attractively into your home. And all at an inexpensive price point that will keep you on budget!</p><p>Our discount sofas are designed to fit your individual style and help define your room aesthetic perfectly. Choose from leather options in cool creams, chic blacks, or natural brown tones. Looking to make a more daring statement with bold patterns or prints? We have that, too, in various color palettes including reds, greens, blues, and earth tones. Upholstered in soft but durable materials, our sofas are built to stand the test of time without forsaking a sense of style.</p><p>We are able to offer such great sofa deals at Rooms To Go Outlet due to our range of overstock inventory and unused floor samples. With us, on sale still means quality. In addition to traditional, modern, and leather options, some of our quality crafted sofas even feature premium details such as Feather Blend seating for the ultimate in plush relaxation. With such a wide selection of comfortable discount sofas to choose from, your only question should be, “How soon can I sit down?”</p>"
+    }
+  },
+  { "routerUrl": "discount-living-rooms/sleeper-sofas",
+    "content": {
+      "title": "Discount Sleeper Sofas",
+      "detail": "<p>Rooms To Go Outlet discount sleeper sofas offer a great solution for unexpected overnight guests. No spare room? No problem! Our inexpensive selections fold out into sturdy queen-size beds, providing a restful night’s sleep while saving space. Each discount sleeper sofa provides comfortable, stylish seating in your living room when it’s not needed as a bed, just like a regular sofa. With brand-name innerspring and gel memory foam mattress options available, you’ll feel great about offering up your new sleeper as a bed to guests. Built from sturdy materials and upholstered in durable fabrics, our sleeper sofas are designed to withstand even heavy use and are easy to clean.</p><p>Since our affordable sleeper sofas come in a variety of designs, you’re sure to find what you’re looking for, whether it’s clean, contemporary lines or a classically styled traditional look. We carry a wide selection of color options ranging from natural and muted earth tones to bright and bold reds, greens, and oranges. Our pieces also feature fun and trendy accents like beautiful inlays, button tufting, nailhead trim, and gorgeous accent pillows. Whether you enjoy the luxurious feel of leather or prefer plush MicroFiber, we have the discount sleeper sofa that will make you happy and keep your overnight guests comfy.</p><p>Finding deals at Rooms To Go Outlet is easy because our pieces are always on sale. Choose from an assortment of discount sleeper sofas, including floor samples, to find your next living room piece without breaking your budget. Lounge the day or night away on the perfect sleeper sofa, found at reasonable overstock prices only from Rooms To Go Outlet.</p>"
+    }
+  },
+  { "routerUrl": "discount-dining-rooms/dining-room-sets",
+    "content": {
+      "title": "Discount Dinning Room Set",
+      "detail": "<p>The impressive selection of discount dining room sets at Rooms To Go Outlet makes it easy to update your home by mixing and matching chairs and tables without having to spend a fortune. How is this possible? Our floor samples, overstock, and scratch and dent products save you tons of money while placing the dining room of your dreams within your reach. Our available stock accommodates both simple and decadent decorating styles, as well as every preference in-between.</p><p>Because most dining rooms center around the perfect table, it is pivotal to choose one that not only fits the room but one that you are pleased to eat at every day. Imagine family dinners seated around a cozy, traditional set, or visualize modernizing your living space with a chic contemporary discount dining room set. We sell affordable traditional, transitional, contemporary, and casual collections featuring your choice of rectangular, round, or square tabletop options as the centerpiece. Further customize your choice by selecting a tempered glass or wood-finished surface and counter or standard table heights.</p><p>Don’t forget about our enticing yet inexpensive options with features such as convenient underside storage cubbies and leaf extensions. Have a particular finish or wood type in mind? We use quality crafted materials and offer plenty of color and finish options to satisfy even the most eccentric of tastes. Don’t needlessly waste your money on overpriced sets from other companies. Buy an exquisite discount dining room set from Rooms To Go Outlet today!</p>"
+    }
+  },
+  { "routerUrl": "discount-dining-rooms/tables",
+    "content": {
+      "title": "Discount Dinning Room Tables",
+      "detail": "<p>When searching for a new dining room table, it’s hard to find quality and style at an inexpensive price. Rooms To Go Outlet offers an extensive inventory with incredible deals on all styles of discount dining tables. Our large selection of warehouse overstock items allows us to offer our customers numerous style options at prices well below market value.</p><p>We make it easy to pick out an appropriately sized table for your dining space with selections that seat two, four, or even upwards of six people at a time. Some of our discount dining tables even include leaves, giving you the option to extend the tabletop to accommodate larger dinner parties. All of our available discount dining tables are chic and sturdy, so whether you are drawn to an elegant black glass top modern table or an oak finished option with rustic country flair, you’ll never have to compromise on style or quality. From casual to contemporary and everything in between, we promise you’ll find an affordable dining table you love at Rooms To Go Outlet.</p><p>Whether crafted from tempered glass, wood solids, or woven rattan, each dining table is designed with lasting durability in mind. You’ll find great deals on dining tables with convenient features, such as built-in drawers, wine racks, or leaves that expand the overall surface area. Choose Rooms To Go Outlet and pick out the perfect discount dining table to suit your style and budget.</p>"
+    }
+  },
+  { "routerUrl": "discount-bedrooms/bedroom-sets",
+    "content": {
+      "title": "Discount Bedroom Sets",
+      "detail": ""
+    }
+  },
+  { "routerUrl": "discount-bedrooms/queen-bedroom-sets",
+    "content": {
+      "title": "Discount Queen Bed Sets",
+      "detail": ""
+    }
+  },
+  { "routerUrl": "discount-leather/sofas",
+    "content": {
+      "title": "Discount Leather Sodas",
+      "detail": ""
+    }
+  },
+  { "routerUrl": "discount-leather/leather-loveseats",
+    "content": {
+      "title": "Discount Leather Loveseats",
+      "detail": ""
+    }
+  },
+  { "routerUrl": "discount-mattress/queen-mattresses",
+    "content": {
+      "title": "Discount Queen Matresses",
+      "detail": ""
+    }
+  },
+  { "routerUrl": "discount-mattress/king-mattresses",
+    "content": {
+      "title": "Discount King Matresses",
+      "detail": ""
+    }
+  },
+  { "routerUrl": "discount-home-decor/lamps",
+    "content": {
+      "title": "Discount Home Decor Lamps",
+      "detail": ""
+    }
+  },
+  { "routerUrl": "discount-home-decor/rugs",
+    "content": {
+      "title": "Discount Home Decor Rugs",
+      "detail": ""
+    }
+  }
+]
