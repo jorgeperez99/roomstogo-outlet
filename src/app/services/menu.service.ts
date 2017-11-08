@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { IMenuItem } from './menuitem.model';
-import {WindowRefService} from '../services/window-ref.service';
+import { IMenuItem } from '../models/menuitem.model';
+import {WindowRefService} from './window-ref.service';
 import {Subject} from 'rxjs/Subject';
 
 
@@ -15,8 +15,6 @@ export class MenuService {
   largeBreakpoint = 768;
   screenWidth = 1000;
   screenHeight = 800;
-  // private resizeSource = new Subject<null>();
-  // resize$ = this.resizeSource.asObservable();
 
   constructor(private http: Http, private windowRef: WindowRefService) {
 
@@ -39,22 +37,12 @@ export class MenuService {
     if (this.screenWidth >= this.largeBreakpoint) {
       this.isVertical = false;
     }
-
-    // this.resizeSource.next();
   }
 
   isLarge(): boolean {
     return this.screenWidth >= this.largeBreakpoint;
   }
 
-  // isVertical = false;
-  // showingLeftSideMenu = false;
-  //
-  // toggleLeftSideMenu(): void {
-  //   this.isVertical = true;
-  //   this.showingLeftSideMenu = !this.showingLeftSideMenu;
-  // }
-  //
 
   toggleSideNav() {
     this.isVertical = !this.isVertical;

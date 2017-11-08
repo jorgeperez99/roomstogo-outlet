@@ -6,8 +6,8 @@ import {
   OnInit,
   Renderer2
 } from '@angular/core';
-import { MenuService } from '../menu.service';
-import { IMenuItem } from '../menuitem.model';
+import { MenuService } from '../../services/menu.service';
+import { IMenuItem } from '../../models/menuitem.model';
 import { Router } from '@angular/router';
 
 @Component({

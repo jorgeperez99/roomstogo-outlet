@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WindowRefService } from '../services/window-ref.service';
-import { MenuService } from '../menus/menu.service';
+import { MenuService } from '../services/menu.service';
 
 @Component({
   selector: 'app-header',
@@ -14,10 +14,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  // goToRtgKids () {
-  //   this.windowService.nativeWindow.location = 'https://www.roomstogokids.com';
-  // }
-  // goToRtg () {
-  //   this.windowService.nativeWindow.location = 'https://www.roomstogo.com';
-  // }
 }

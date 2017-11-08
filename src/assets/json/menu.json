@@ -47,13 +47,13 @@
       {
         "text": "Bed Rooms Sets",
         "icon": "glyphicon-dashboard",
-        "route": "dashboard",
+        "route": "discount-bedrooms/bedroom-sets",
         "submenu": null
       },
       {
         "text": "Queen Bed Room Sets",
         "icon": "glyphicon-flag",
-        "route": "",
+        "route": "discount-bedrooms/queen-bedroom-sets",
         "submenu": null
       }
     ],
@@ -67,13 +67,13 @@
       {
         "text": "Leather Sofas",
         "icon": "glyphicon-dashboard",
-        "route": "dashboard",
+        "route": "discount-leather/sofas",
         "submenu": null
       },
       {
         "text": "Leather Love Seats",
         "icon": "glyphicon-flag",
-        "route": "",
+        "route": "discount-leather/leather-loveseats",
         "submenu": null
       }
     ],
@@ -87,13 +87,13 @@
       {
         "text": "Queen",
         "icon": "glyphicon-dashboard",
-        "route": "dashboard",
+        "route": "discount-mattress/queen-mattresses",
         "submenu": null
       },
       {
         "text": "King",
         "icon": "glyphicon-flag",
-        "route": "",
+        "route": "discount-mattress/king-mattresses",
         "submenu": null
       }
     ],
@@ -107,13 +107,13 @@
       {
         "text": "Lamps",
         "icon": "glyphicon-dashboard",
-        "route": "dashboard",
+        "route": "discount-home-decor/lamps",
         "submenu": null
       },
       {
         "text": "Rugs",
         "icon": "glyphicon-flag",
-        "route": "",
+        "route": "discount-home-decor/rugs",
         "submenu": null
       }
     ],
