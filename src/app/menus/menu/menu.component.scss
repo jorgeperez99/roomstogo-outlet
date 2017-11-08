@@ -10,11 +10,14 @@
   display: inline-block;
   width: 100%;
   bottom: 0;
-  top: 100px;
+
+  top: 85px;
+  height: 100%;
+
   padding-left: 4px;
   background-color: #55C;
   overflow: auto;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   background-color: rgba(50,46,70, 0.3);
   color: black;

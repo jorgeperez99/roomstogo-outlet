@@ -20,6 +20,7 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/normalize.css/normalize.css",
         "./assets/linearicons/style.css",
         "./assets/styles/styles.scss"
       ],

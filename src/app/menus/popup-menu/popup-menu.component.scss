@@ -2,13 +2,14 @@
 
 :host {
   position: absolute;
-  top: 43px;
+  z-index: 100;
+  top: 42px;
   width: 600px;
   background-color: #fff;
   border-bottom: $divider-border-lightgray;
   border-left: $divider-border-lightgray;
   border-right: $divider-border-lightgray;
-
+  border-top: solid 4px white;
   li {
     float: left;
     clear: both;
