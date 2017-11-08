@@ -70,7 +70,7 @@ header {
 
     img {
       margin: 20px 40px 10px 0;
-      @include media-up-to(sm) {
+      @include media-up-to(xs) {
         margin: 8px auto;
         @include img-keep-ratio(45px);
       }

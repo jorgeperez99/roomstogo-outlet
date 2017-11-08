@@ -19,7 +19,7 @@
           [ngClass]="{'icon-menu': !menuService.isVertical, 'icon-cross': menuService.isVertical}"
           (click)="menuService.toggleSideNav()"></span>
     <div class="logo-pane col-sm-offset-1 col-xs-8 col-sm-11">
-      <img src="../../assets/images/logo.jpeg" class="img-responsive" alt="Rooms To Go outlet logo">
+      <img src="../../assets/images/logo.jpeg"  alt="Rooms To Go outlet logo">
       <app-menu class="row hidden-xs" *ngIf="!menuService.isVertical"></app-menu>
     </div>
   </div>
