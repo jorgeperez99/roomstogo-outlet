@@ -1,6 +1,5 @@
 
 <li *ngFor="let item of menu; let i = index;" >
-  <hr *ngIf="menuService.isVertical && i == 0" class="vertical-submenu-top-divider"/>
   <app-menu-item
     [ngClass]="{'vertical-menu': menuService.isVertical}"
     [item]="item"

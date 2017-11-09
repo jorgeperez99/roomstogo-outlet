@@ -9,6 +9,7 @@ header {
   @include media-up-to(sm){
     position: fixed;
     width: 100%;
+    top: 0;
   }
 }
 

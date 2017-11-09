@@ -1,8 +1,8 @@
 @import "../assets/styles/variables";
-.router-outlet {
+.below-header {
 
   @include media-up-to(sm) {
-    padding-top: $mobile-router-outlet-top;
+    padding-top: $mobile-header-fixed-height;
   }
 
 }

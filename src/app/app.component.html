@@ -1,10 +1,11 @@
 <app-header>
 </app-header>
+<div class="below-header">
 <app-menu class="vertical-menu"
           *ngIf="menuService.isVertical"
           [ngClass]="{'menu-close': !menuService.isOpen, 'menu-open': menuService.isOpen }"></app-menu>
 
-<div class="router-outlet">
+
   <router-outlet></router-outlet>
 </div>
 
