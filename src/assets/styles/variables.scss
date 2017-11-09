@@ -2,6 +2,10 @@ $color-blue: #00529f;
 $color-navy: #25246b;
 $color-white: #fff;
 $divider-border-lightgray: solid #d2d2d2 .05em;
+$mobile-switch-site-height: 23px;
+$mobile-logo-row-height: 68px;
+$mobile-router-outlet-top: $mobile-switch-site-height + $mobile-logo-row-height;
+
 
 @mixin media-up-to($media) {
   @if $media == lg {

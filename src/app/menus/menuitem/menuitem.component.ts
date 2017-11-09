@@ -59,6 +59,7 @@ export class MenuItemComponent implements OnInit {
 
   @HostListener('mouseenter')
   onMouseEnter(): void {
+    console.log('onmouse enter');
     if (!this.menuService.isVertical) {
       if (this.item.submenu) {
         this.mouseInItem = true;

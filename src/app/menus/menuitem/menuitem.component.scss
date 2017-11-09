@@ -7,11 +7,11 @@
 }
 
 :host(.vertical-menu) {
-  display: block;
-  margin-left: 0;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  color: white;
+  //display: block;
+  //margin-left: 0;
+  //margin-top: 6px;
+  //margin-bottom: 6px;
+  //color: white;
 }
 
 span {
@@ -19,20 +19,24 @@ span {
 }
 
 
-.menu-item {
+//.menu-item {
+//
+//}
+
+:host:not(.in-popup) > .menu-item {
+  //background-color: $color-blue;
+  color: $color-navy;
   padding: 10px 25px;
+  font-size: 17px;
+
   @include media-up-to(lg) {
     padding: 10px 15px;
   }
-  font-size: 17px;
 
   @include media-up-to(md) {
     padding: 10px 8px;
     font-size: 14px;
   }
-
-
-  color: $color-navy;
 }
 
 :host:not(.in-popup) > .menu-item:hover {
@@ -47,7 +51,7 @@ span {
 }
 
 .menu-item.vertical-menu {
-  padding: 6px 6px 6px 0;
+
 }
 
 .menu-item.vertical-menu:hover {

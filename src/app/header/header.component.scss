@@ -12,9 +12,9 @@ header {
 
 .switch-site {
   background: $color-blue;
-  height: 39px;
+  height: 40px;
   @include media-up-to(sm) {
-    height: 23px;
+    height: $mobile-switch-site-height;
     text-align: center;
   }
   div {
@@ -66,6 +66,11 @@ header {
 .logo-row {
   border-bottom: $divider-border-lightgray;
   border-top: $divider-border-lightgray;
+
+  @include media-up-to(sm){
+    height: $mobile-logo-row-height;
+  }
+
   .logo-pane {
     display: flex;
     flex-wrap: wrap;

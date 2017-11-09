@@ -14,7 +14,7 @@ import {DetailComponent} from './detail/detail.component';
 export class AppComponent implements OnInit {
   title = 'app';
 
-  constructor(private router: Router, private routeService: RouteService,  private menuService: MenuService) {
+  constructor(private router: Router, private routeService: RouteService,  public menuService: MenuService) {
 
   }
 

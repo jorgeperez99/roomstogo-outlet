@@ -10,9 +10,10 @@ export class MenuService {
 
   items: Array<IMenuItem>;
   isVertical = false;
+  isOpen = false;
 
   // TODO: move screen related dependency to screenService in the future.
-  largeBreakpoint = 768;
+  largeBreakpoint = 750;
   screenWidth = 1000;
   screenHeight = 800;
 
@@ -36,6 +37,7 @@ export class MenuService {
     this.setScreenSize();
     if (this.screenWidth >= this.largeBreakpoint) {
       this.isVertical = false;
+      this.isOpen = false;
     }
   }
 
@@ -45,7 +47,7 @@ export class MenuService {
 
 
   toggleSideNav() {
-    this.isVertical = !this.isVertical;
+    this.isOpen = !this.isOpen;
   }
 
   hydrateItems() {

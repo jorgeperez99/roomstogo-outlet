@@ -2,7 +2,7 @@
 .router-outlet {
 
   @include media-up-to(sm) {
-    padding-top: 80px;
+    padding-top: $mobile-router-outlet-top;
   }
 
 }

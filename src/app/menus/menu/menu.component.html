@@ -1,9 +1,9 @@
-<nav>
+<nav (click)="navClicked($event);">
   <ul>
     <li *ngFor="let item of menuService.items; let i = index;">
       <app-menu-item
         [item]="item"
-        [class.vertical-menu]="menuService.isVertical"
+        [ngClass]="{'vertical-menu': menuService.isVertical }"
         [menuIndex]="i"
       ></app-menu-item>
     </li>
