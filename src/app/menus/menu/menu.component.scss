@@ -17,8 +17,6 @@
 
 }
 
-
-
 :host(.vertical-menu){
 
   width: 100%;
@@ -35,7 +33,7 @@
       display: block;
 
     }
-    left: 0;
+
     position: absolute;
     height:100%;
     width: 70%;
@@ -47,25 +45,87 @@
     //animation-name: move-to-left;
   }
 }
-:host(.vertical-menu.vertical-menu-close) {
+:host(.menu-close) {
   background-color: transparent;
   nav {
+    -webkit-animation-name: move-to-right; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 250ms; /* Safari 4.0 - 8.0 */
+    animation-name: move-to-right;
+    animation-duration: 150ms;
+
     left: -70%;
   }
 }
-//:host(.vertical-menu-close) {
-//  visibility: hidden;
-//}
+:host(.menu-open) {
+  //background-color: transparent;
+  nav {
+    -webkit-animation-name: move-to-left; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 250ms; /* Safari 4.0 - 8.0 */
+    animation-name: move-to-left;
+    animation-duration: 250ms;
 
+    left:0;
+  }
+}
+
+
+@-webkit-keyframes move-to-left {
+  from {
+    left: -70%;
+    background-color: transparent;
+  }
+  to {
+    left: 0;
+    background-color: rgba(50,46,70, 0.5);
+  }
+}
 
 @keyframes move-to-left {
   from {
    left: -70%;
+
   }
   to {
     left: 0;
+
+  }
+}
+
+@-webkit-keyframes move-to-right {
+  0% {
+    left: 0;
+   // background-color: rgba(50,46,70, 0.5);
+  }
+  99% {
+    //background-color: rgba(50,46,70, 0.5);
+  }
+  100% {
+    left: -70%;
+    //background-color: transparent;
+  }
+}
+
+@keyframes move-to-right {
+  from {
+    left: 0;
+    background-color: rgba(50,46,70, 0.5);
+  }
+  to {
+    left: -70%;
+    background-color: transparent;
   }
 }
 
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
 

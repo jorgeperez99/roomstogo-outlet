@@ -1,5 +1,7 @@
 @import "../../assets/styles/variables";
 @import "../../assets/linearicons/style.css";
+@import "../../assets/styles/animation";
+
 
 header {
   background-color: white;
@@ -64,6 +66,8 @@ header {
 }
 
 .logo-row {
+
+
   border-bottom: $divider-border-lightgray;
   border-top: $divider-border-lightgray;
 
@@ -86,6 +90,7 @@ header {
 }
 
 
+
 .hamburger {
   font-weight: 600;
   font-size: 30px;
@@ -93,4 +98,6 @@ header {
   text-align: center;
   padding-top: 17px;
 }
+
+
 

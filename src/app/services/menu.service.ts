@@ -20,7 +20,7 @@ export class MenuService {
   constructor(private http: Http, private windowRef: WindowRefService) {
 
     try {
-      this.setScreenSize();
+      this.recalculate();
       this.windowRef.nativeWindow.addEventListener('resize', (event) => this.onResize(event));
 
     } catch (e) {
@@ -33,15 +33,22 @@ export class MenuService {
     this.screenHeight = this.windowRef.nativeWindow.innerHeight;
   }
 
-  onResize ($event): void {
+  private recalculate () {
     this.setScreenSize();
-    if (this.screenWidth >= this.largeBreakpoint) {
+    if (this.isLarge) {
       this.isVertical = false;
+      this.isOpen = false;
+    } else {
+      this.isVertical = true;
       this.isOpen = false;
     }
   }
 
-  isLarge(): boolean {
+  onResize ($event): void {
+    this.recalculate();
+  }
+
+  get isLarge(): boolean {
     return this.screenWidth >= this.largeBreakpoint;
   }
 
