@@ -1,5 +1,6 @@
 
 <li *ngFor="let item of menu; let i = index;" >
+  <hr *ngIf="menuService.isVertical && i == 0" class="vertical-submenu-top-divider"/>
   <app-menu-item
     [ngClass]="{'vertical-menu': menuService.isVertical}"
     [item]="item"
@@ -7,4 +8,4 @@
     class="in-popup"
   ></app-menu-item>
 </li>
-<img [src]="submenuLink" class="img-thumbnail" />
+<img [src]="submenuLink" class="img-thumbnail" *ngIf="!menuService.isVertical" />

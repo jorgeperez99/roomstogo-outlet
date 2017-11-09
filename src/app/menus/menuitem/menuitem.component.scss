@@ -6,62 +6,66 @@
   cursor: pointer;
 }
 
-:host(.vertical-menu) {
-  //display: block;
-  //margin-left: 0;
-  //margin-top: 6px;
-  //margin-bottom: 6px;
-  //color: white;
-}
+:host:not(.vertical-menu) {
 
-span {
-  pointer-events: none;
-}
+  &:not(.in-popup) > .menu-item {
+    color: $color-navy;
+    padding: 8px 20px;
+    font-size: 17px;
 
+    @include media-up-to(lg) {
+      padding: 8px 15px;
+    }
 
-//.menu-item {
-//
-//}
+    @include media-up-to(md) {
+      padding: 7px 13px;
+      font-size: 14px;
+    }
 
-:host:not(.in-popup) > .menu-item {
-  //background-color: $color-blue;
-  color: $color-navy;
-  padding: 10px 25px;
-  font-size: 17px;
-
-  @include media-up-to(lg) {
-    padding: 10px 15px;
+    &:hover {
+        background-color: $color-blue;
+        color: $color-white;
+    }
   }
 
-  @include media-up-to(md) {
-    padding: 10px 8px;
+  &.in-popup > .menu-item {
+    color: $color-navy;
     font-size: 14px;
+    padding: 4px 20px;
   }
 }
 
-:host:not(.in-popup) > .menu-item:hover {
-  background-color: $color-blue;
-  color: $color-white;
+
+:host(.vertical-menu) {
+  display: block;
+  &:not(.in-popup) > .menu-item {
+    color: $color-navy;
+    padding: 12px 20px;
+    font-size: 17px;
+    border-top: $divider-border-lightgray;
+
+    &:hover {
+
+    }
+  }
+
+  &.in-popup > .menu-item {
+    color: $color-navy;
+    font-size: 17px;
+    padding: 7px 20px;
+    &::before {
+      content: "  ";
+      //https://stackoverflow.com/questions/5467605/add-a-space-after-an-element-using-after
+      white-space: pre;
+    }
+  }
 }
 
-:host.in-popup > .menu-item {
-  color: $color-navy;
-  font-size: 14px;
-  padding: 4px 20px;
-}
-
-.menu-item.vertical-menu {
-
-}
-
-.menu-item.vertical-menu:hover {
-  background-color: green;
-}
 
 .router-link-active {
-  background-color: #dfd;
+  background-color: red;
 }
 
 .router-link-active.vertical-menu {
-  background-color: green;
+  background-color: red;
 }

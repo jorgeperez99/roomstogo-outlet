@@ -1,28 +1,37 @@
 @import "../../../assets/styles/variables.scss";
 
-:host {
+:host:not(.vertical-menu) {
   position: absolute;
   z-index: 100;
-  top: 42px;
+  top: 39px;
   width: 600px;
-  background-color: #fff;
+  background-color: $color-white;
   border-bottom: $divider-border-lightgray;
   border-left: $divider-border-lightgray;
   border-right: $divider-border-lightgray;
-  border-top: solid 4px white;
-  li {
-    float: left;
-    clear: both;
-
-    &:first-child {
-      margin-top: 20px;
-    }
+  border-top: solid 3px $color-white;
+  //li {
+  //  float: left;
+  //  clear: both;
+  //
+  //  &:first-child {
+  //    //margin-top: 20px;
+  //  }
+  //}
+  img {
+    float: right;
+    margin: 10px;
   }
-
 }
 
-img {
-  float: right;
-  margin: 10px;
+:host(.vertical-menu) {
+  border-top: $divider-border-lightgray;
+
+  hr.vertical-submenu-top-divider {
+    border-top: $divider-border-lightgray;
+    border-top-color: $color-super-lightgray;
+    margin: 0px 16px;
+  }
 }
+
 
