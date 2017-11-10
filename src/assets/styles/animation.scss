@@ -49,13 +49,13 @@
     left: 0;
   }
   to {
-    left: -70%;
+    left: $vertical-menu-width * -1;
   }
 }
 
 @include keyframe(move-to-right) {
   from {
-    left: -70%;
+    left: $vertical-menu-width * -1;
   }
   to {
     left: 0;

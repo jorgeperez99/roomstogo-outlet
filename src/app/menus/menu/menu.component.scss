@@ -43,7 +43,7 @@
     bottom: 0;
     top: $mobile-header-fixed-height;
     overflow-y: auto;
-    width: 70%;
+    width: $vertical-menu-width;
     background-color: $color-white;
   }
 }
@@ -53,7 +53,7 @@
 
   nav {
     @include animation(1ms, 150ms, move-to-left);
-    left: -70%;
+    left: $vertical-menu-width * -1;
   }
 }
 
