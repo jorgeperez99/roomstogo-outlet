@@ -39,12 +39,49 @@
 :host(.vertical-menu) {
   display: block;
 
+  i.rtg-icon-arrow-right {
+    float: right;
+    color: $color-navy;
+
+    &::before {
+      height: 0;
+      width: 0;
+      border: 6px solid transparent;
+      border-top-color: $color-blue;
+      display: block;
+      margin-left: 7px;
+      text-indent: -999em;
+      cursor: pointer;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      margin: 0;
+      padding: 0;
+      background: none;
+      z-index: 2;
+      content: "";
+    }
+
+    &.open {
+      &::before {
+        border-top-color: transparent;
+        border-bottom-color: $color-white;
+        top: 13px;
+      }
+    }
+  }
+
   &:not(.in-popup) > .menu-item {
     padding: 12px 20px;
     border-top: $divider-border-lightgray;
     color: $color-blue;
     font-weight: 700;
     font-size: 14px;
+
+    &.open {
+      background-color: $color-blue;
+      color: $color-white;
+    }
 
     &:hover {
 

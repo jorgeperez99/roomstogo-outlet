@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "./assets/linearicons/style.css",
+        "./assets/ionicons/css/ionicons.css",
         "./assets/styles/styles.scss"
       ],
       "scripts": [

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:b');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+//@import url('https://fonts.googleapis.com/css?family=Roboto:b');
+
 @import "./variables";
 
 body {
@@ -7,5 +9,7 @@ body {
   @include media-up-to(sm) {
     padding-top: $mobile-header-fixed-height;
   }
+
+  @extend .smooth-text;
 
 }

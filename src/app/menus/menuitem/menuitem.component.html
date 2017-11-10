@@ -1,6 +1,8 @@
 <div class="menu-item"
-     [ngClass]="{'vertical-menu': menuService.isVertical}">
+     [ngClass]="{'vertical-menu': menuService.isVertical, 'open': mouseInPopup}"
+>
   <span>{{ item.text.toUpperCase() }}</span>
+  <i  *ngIf="item.submenu" class="rtg-icon-arrow-right" [ngClass]="{'open': mouseInPopup }" ></i>
 </div>
 <app-popup-menu
   *ngIf="mouseInPopup || mouseInItem"
