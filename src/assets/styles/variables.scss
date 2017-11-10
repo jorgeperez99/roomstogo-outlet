@@ -8,7 +8,7 @@ $divider-border-lightgray: solid $color-lightgray .05em;
 $mobile-switch-site-height: 23px;
 $mobile-logo-row-height: 68px;
 $mobile-header-fixed-height: $mobile-switch-site-height + $mobile-logo-row-height;
-$vertical-menu-width: 70%;
+$vertical-menu-width: 80%;
 
 
 @mixin media-up-to($media) {
