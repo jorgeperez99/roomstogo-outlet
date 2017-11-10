@@ -43,9 +43,17 @@ export class MenuItemComponent implements OnInit {
         this.mouseInPopup = !this.mouseInPopup;
       }
     } else if (this.item.route) {
-      const newEvent = new MouseEvent('mouseleave', {bubbles: true});
-      this.renderer.selectRootElement(this.el.nativeElement).dispatchEvent(newEvent);
 
+
+
+      if (!this.menuService.isVertical) {
+        // this.mouseInItem = false;
+        // this.mouseInPopup = false;
+        const newEvent = new MouseEvent('mouseleave', {bubbles: true});
+        this.renderer.selectRootElement(this.el.nativeElement).dispatchEvent(newEvent);
+      } else {
+        this.menuService.isOpen = false;
+      }
       this.router.navigate(['/' + this.item.route]);
     }
   }

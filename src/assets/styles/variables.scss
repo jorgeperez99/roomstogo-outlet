@@ -33,3 +33,11 @@ $vertical-menu-width: 80%;
   width: auto;
   height: auto;
 }
+
+@mixin filter ($amount-in-pixel) {
+  filter: blur($amount-in-pixel);
+  -webkit-filter: blur($amount-in-pixel);
+  -moz-filter: blur($amount-in-pixel);
+  -o-filter: blur($amount-in-pixel);
+  -ms-filter: blur($amount-in-pixel);
+}
