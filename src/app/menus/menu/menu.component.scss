@@ -22,7 +22,7 @@
 :host(.vertical-menu){
 
   width: 100%;
-  top: $mobile-router-outlet-top;
+  top: $mobile-header-fixed-height;
   height: 100%;
   overflow: auto;
   position: fixed;
@@ -30,11 +30,19 @@
   color: black;
   // TODO: check .no-cssanimations test this in ie9
   nav {
-    li {
-      display: block;
+    margin: 0;
+    padding: 0;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        display: block;
+      }
     }
-    position: absolute;
-    height:100%;
+    position: fixed;
+    bottom: 0;
+    top: $mobile-header-fixed-height;
+    overflow-y: auto;
     width: 70%;
     background-color: $color-white;
   }
