@@ -5,7 +5,7 @@ $color-darkgray: #333;
 $color-lightgray: #d2d2d2;
 $color-super-lightgray: #e2e2e2;
 $divider-border-lightgray: solid $color-lightgray .05em;
-$mobile-switch-site-height: 23px;
+$mobile-switch-site-height: 25px;
 $mobile-logo-row-height: 68px;
 $mobile-header-fixed-height: $mobile-switch-site-height + $mobile-logo-row-height;
 $vertical-menu-width: 80%;
@@ -34,10 +34,10 @@ $vertical-menu-width: 80%;
   height: auto;
 }
 
-@mixin filter ($amount-in-pixel) {
-  filter: blur($amount-in-pixel);
-  -webkit-filter: blur($amount-in-pixel);
-  -moz-filter: blur($amount-in-pixel);
-  -o-filter: blur($amount-in-pixel);
-  -ms-filter: blur($amount-in-pixel);
+@mixin filter ($filter) {
+  filter: $filter;
+  -webkit-filter: $filter;
+  -moz-filter: $filter;
+  -o-filter: $filter;
+  -ms-filter: $filter;
 }

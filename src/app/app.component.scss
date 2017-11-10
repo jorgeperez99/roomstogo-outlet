@@ -1,8 +1,14 @@
 @import "../assets/styles/variables";
-.below-header {
 
-  @include media-up-to(sm) {
-    padding-top: $mobile-header-fixed-height;
+
+.vertical-menu-overlay {
+  @include filter(blur(3px));
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  &.off {
+    @include filter(none);
   }
 
 }

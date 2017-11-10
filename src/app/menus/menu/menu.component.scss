@@ -22,23 +22,26 @@
 :host(.vertical-menu){
 
   width: 100%;
-  top: $mobile-header-fixed-height;
   height: 100%;
   overflow: auto;
   position: fixed;
   background-color: rgba(50,46,70, 0.5);
   color: black;
-  // TODO: check .no-cssanimations test this in ie9
+  z-index: 999;
+
   nav {
     margin: 0;
     padding: 0;
+
     ul {
       margin: 0;
       padding: 0;
+
       li {
         display: block;
       }
     }
+
     position: fixed;
     bottom: 0;
     top: $mobile-header-fixed-height;
@@ -48,6 +51,7 @@
   }
 }
 
+// TODO: check .no-cssanimations test this in ie10 up
 :host(.menu-close) {
   background-color: transparent;
 

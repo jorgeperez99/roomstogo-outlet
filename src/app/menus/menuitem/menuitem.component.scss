@@ -38,6 +38,7 @@
 
 :host(.vertical-menu) {
   display: block;
+
   &:not(.in-popup) > .menu-item {
     padding: 12px 20px;
     border-top: $divider-border-lightgray;

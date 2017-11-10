@@ -16,12 +16,15 @@ header {
 .switch-site {
   background: $color-blue;
   height: 40px;
+
   @include media-up-to(sm) {
     height: $mobile-switch-site-height;
     text-align: center;
   }
+
   div {
     height: 100%;
+
     ul {
       list-style-type: none;
       margin: 0;
@@ -46,7 +49,7 @@ header {
         width: 100px;
         background-color: transparent;
         padding-top: 2px;
-        font-size: 13px;
+        font-size: 14px;
         text-decoration: underline;
         font-weight: 200;
       }
@@ -58,6 +61,7 @@ header {
       &.active {
         background: $color-white;
         color: $color-blue;
+
         a {
           color: $color-blue;
         }
@@ -67,8 +71,6 @@ header {
 }
 
 .logo-row {
-
-
   border-bottom: $divider-border-lightgray;
   border-top: $divider-border-lightgray;
 
@@ -82,6 +84,7 @@ header {
 
     img {
       margin: 20px 40px 10px 0;
+
       @include media-up-to(sm) {
         margin: 8px auto;
         @include img-keep-ratio(45px);
@@ -89,8 +92,6 @@ header {
     }
   }
 }
-
-
 
 .hamburger {
   font-weight: 600;
