@@ -1,5 +1,5 @@
 @import "../assets/styles/variables";
-
+@import "../assets/styles/animation";
 
 .vertical-menu-overlay {
   @include filter(blur(3px));
@@ -7,6 +7,8 @@
   height: 100%;
   width: 100%;
   position: relative;
+  @include transition(linear, filter, 1ms, $vertical-menu-animation-duration);
+
   &.off {
     @include filter(none);
   }

@@ -9,6 +9,7 @@ $mobile-switch-site-height: 25px;
 $mobile-logo-row-height: 68px;
 $mobile-header-fixed-height: $mobile-switch-site-height + $mobile-logo-row-height;
 $vertical-menu-width: 75%;
+$vertical-menu-animation-duration: 150ms;
 
 
 @mixin media-up-to($media) {
