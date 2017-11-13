@@ -80,4 +80,4 @@ import 'intl';  // Run `npm install --save intl`.
  */
 // import 'intl/locale-data/jsonp/en';
 
-import './assets/polyfills/ieMouseEvent.js';
+// import './assets/polyfills/mouseEvent.js';

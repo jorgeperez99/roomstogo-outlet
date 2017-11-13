@@ -42,4 +42,18 @@ export class MenuService implements OnDestroy {
     this.http.get('assets/json/menu.json')
       .subscribe(res => this.items = res.json());
   }
+
+  closeAllSubmenu() {
+    this.closeAllSubmenuRecursive(this.items);
+  }
+
+  private closeAllSubmenuRecursive(items: Array<IMenuItem>): void {
+    items.forEach(item => {
+      item.submenuOpen = false;
+      if (item.submenu) {
+        this.closeAllSubmenuRecursive(item.submenu);
+      }
+    });
+  }
+
 }

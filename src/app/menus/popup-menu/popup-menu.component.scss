@@ -3,13 +3,17 @@
 :host:not(.vertical-menu) {
   position: absolute;
   z-index: 100;
-  top: 39px;
   width: 600px;
   background-color: $color-white;
   border-bottom: $divider-border-lightgray;
   border-left: $divider-border-lightgray;
   border-right: $divider-border-lightgray;
   border-top: solid 3px $color-white;
+  top: 38px;
+
+  @include media-up-to(lg) {
+    top: 30px;
+  }
 
   img {
     float: right;

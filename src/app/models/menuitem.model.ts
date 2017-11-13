@@ -4,4 +4,5 @@ export interface IMenuItem {
   route: string;
   submenu: Array<IMenuItem>;
   submenuLink?: string;
+  submenuOpen?: boolean;
 }

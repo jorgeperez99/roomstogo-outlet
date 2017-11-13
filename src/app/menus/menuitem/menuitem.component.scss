@@ -14,11 +14,12 @@
     font-size: 17px;
 
     @include media-up-to(lg) {
-      padding: 8px 15px;
+      padding: 7px 13px;
+      font-size: 14px;
     }
 
     @include media-up-to(md) {
-      padding: 7px 13px;
+      padding: 7px 10px;
       font-size: 14px;
     }
 
