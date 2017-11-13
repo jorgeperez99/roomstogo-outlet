@@ -34,6 +34,7 @@ export class MenuItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  @HostListener('touchstart', ['$event'])
   @HostListener('click', ['$event'])
   onClick(event): void {
     event.stopPropagation();
@@ -58,6 +59,7 @@ export class MenuItemComponent implements OnInit {
     }
   }
 
+  @HostListener('touchleave', ['$event'])
   @HostListener('mouseleave', ['$event'])
   onMouseLeave(event): void {
     if (!this.menuService.isVertical) {
@@ -65,6 +67,7 @@ export class MenuItemComponent implements OnInit {
     }
   }
 
+  @HostListener('touchstart', ['$event'])
   @HostListener('mouseenter')
   onMouseEnter(): void {
     console.log('onmouse enter');
