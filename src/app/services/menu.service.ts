@@ -1,41 +1,31 @@
-import { Injectable } from '@angular/core';
+import {Injectable, OnDestroy, OnInit} from '@angular/core';
 import { Http } from '@angular/http';
 import { IMenuItem } from '../models/menuitem.model';
 import {WindowRefService} from './window-ref.service';
 import {Subject} from 'rxjs/Subject';
+import {ScreenService} from './screen.service';
+import {Subscription} from 'rxjs/Subscription';
 
 
 @Injectable()
-export class MenuService {
-
+export class MenuService implements OnDestroy {
   items: Array<IMenuItem>;
   isVertical = false;
   isOpen = false;
+  screenSubscription: Subscription;
 
-  // TODO: move screen related dependency to screenService in the future.
-  largeBreakpoint = 750;
-  screenWidth = 1000;
-  screenHeight = 800;
-
-  constructor(private http: Http, private windowRef: WindowRefService) {
-
-    try {
-      this.recalculate();
-      this.windowRef.nativeWindow.addEventListener('resize', (event) => this.onResize(event));
-
-    } catch (e) {
-
-    }
+  constructor(private http: Http, private screenService: ScreenService) {
+    this.reset();
+    this.screenSubscription = screenService.screenResize$.subscribe(() => this.reset());
   }
 
-  private setScreenSize(): void {
-    this.screenWidth = this.windowRef.nativeWindow.innerWidth;
-    this.screenHeight = this.windowRef.nativeWindow.innerHeight;
+
+  ngOnDestroy(): void {
+    this.screenSubscription.unsubscribe();
   }
 
-  private recalculate () {
-    this.setScreenSize();
-    if (this.isLarge) {
+  private reset () {
+    if (this.screenService.isLarge) {
       this.isVertical = false;
       this.isOpen = false;
     } else {
@@ -43,15 +33,6 @@ export class MenuService {
       this.isOpen = false;
     }
   }
-
-  onResize ($event): void {
-    this.recalculate();
-  }
-
-  get isLarge(): boolean {
-    return this.screenWidth >= this.largeBreakpoint;
-  }
-
 
   toggleSideNav() {
     this.isOpen = !this.isOpen;
