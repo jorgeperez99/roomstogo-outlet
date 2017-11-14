@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,  } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FlierComponent } from './flier/flier.component';
-import { appRoutes } from './app.routing';
 import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menuitem/menuitem.component';
 import {MenuService} from './services/menu.service';
@@ -32,6 +33,8 @@ import {FooterComponent} from './footer/footer.component';
   imports: [
     BrowserModule,
     HttpModule,
+    NoopAnimationsModule,
+    MatCardModule,
     RouterModule.forRoot([])
   ],
   providers: [

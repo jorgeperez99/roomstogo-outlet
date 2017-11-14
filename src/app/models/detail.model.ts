@@ -5,5 +5,12 @@ export class Detail {
 
 export class DetailContent {
   title: string;
-  detail: string;
+  details: Array<string>;
+  images: Array<Image>;
+}
+
+export class Image {
+  url: string;
+  alt: string;
+  title: string;
 }

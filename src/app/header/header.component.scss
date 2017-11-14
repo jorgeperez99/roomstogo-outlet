@@ -5,6 +5,7 @@
 
 header {
   background-color: white;
+  box-shadow: $header-box-shadow;
 
   h1 {
     // it's ok to use this to hide - https://stackoverflow.com/questions/3239202/whats-the-correct-way-to-hide-the-h1-tag-and-not-be-banned-from-google
@@ -17,7 +18,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    box-shadow: 1px 0px 8px #5f5f5f;
+
     z-index: 1000;
   }
 }

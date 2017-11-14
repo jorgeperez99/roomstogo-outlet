@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 //@import url('https://fonts.googleapis.com/css?family=Roboto:b');
 
+//below are Material stuff
+//@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,400italic');
+
+//
+//<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+//<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+
 @import "./variables";
 
 body, html {
@@ -15,5 +25,8 @@ body {
   }
 
   @extend .smooth-text;
+}
 
+h2 {
+  font-size: 27px;
 }
