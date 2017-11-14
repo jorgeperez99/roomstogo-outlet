@@ -10,8 +10,8 @@
 
   &:not(.in-popup) > .menu-item {
     color: $color-navy;
-    padding: 8px 20px;
-    font-size: 17px;
+    padding: 8px 18px;
+    font-size: 16px;
 
     @include media-up-to(lg) {
       padding: 7px 12px;

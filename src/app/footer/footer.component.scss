@@ -3,12 +3,20 @@
 footer {
   background: $color-black;
   color: $color-white;
-  height: 40px;
   font-size: 13px;
+  @include media-up-to(sm) {
+    font-size: 11px;
+  }
 
   span {
     display: block;
     margin: auto auto;
     text-align: center;
+    &:first-child {
+      margin-top: 3px;
+    }
+    &:last-child {
+      margin-bottom: 3px;
+    }
   }
 }

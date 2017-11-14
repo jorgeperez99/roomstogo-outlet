@@ -6,6 +6,13 @@
 header {
   background-color: white;
 
+  h1 {
+    // it's ok to use this to hide - https://stackoverflow.com/questions/3239202/whats-the-correct-way-to-hide-the-h1-tag-and-not-be-banned-from-google
+    visibility: hidden;
+    font-size: 10px;
+    margin: 0;
+  }
+
   @include media-up-to(sm){
     position: fixed;
     width: 100%;
