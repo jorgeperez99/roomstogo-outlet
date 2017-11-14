@@ -1,8 +1,8 @@
-export interface IMenuItem {
+export class MenuItem {
   text: string;
   icon: string; // glyphiicon class
   route: string;
-  submenu: Array<IMenuItem>;
+  submenu: Array<MenuItem>;
   submenuLink?: string;
   submenuOpen?: boolean;
 }

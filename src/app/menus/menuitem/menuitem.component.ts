@@ -7,7 +7,7 @@ import {
   Renderer2
 } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
-import { IMenuItem } from '../../models/menuitem.model';
+import { MenuItem } from '../../models/menuitem.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 })
 export class MenuItemComponent implements OnInit {
 
-  @Input() item = <IMenuItem>null; // see angular-cli issue #2034
+  @Input() item = <MenuItem>null; // see angular-cli issue #2034
   @Input() menuIndex: number;
   popupLeftPosition: number;
 

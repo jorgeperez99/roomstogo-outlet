@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MenuService} from '../../services/menu.service';
-import {IMenuItem} from '../../models/menuitem.model';
+import {MenuItem} from '../../models/menuitem.model';
 
 @Component({
   selector: 'app-popup-menu',
@@ -9,7 +9,7 @@ import {IMenuItem} from '../../models/menuitem.model';
 })
 export class PopupMenuComponent implements OnInit {
 
-  @Input() menu: Array<IMenuItem>;
+  @Input() menu: Array<MenuItem>;
   @Input() submenuLink: string;
 
   constructor(public menuService: MenuService) { }

@@ -1,9 +1,9 @@
-export interface IDetail {
+export class Detail {
   routerUrl: string;
-  content: IDetailContent;
+  content: DetailContent;
 }
 
-export interface IDetailContent {
+export class DetailContent {
   title: string;
   detail: string;
 }
