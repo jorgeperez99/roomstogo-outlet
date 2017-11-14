@@ -78,6 +78,7 @@ header {
 
   min-height: $logo-row-height;
   @include media-up-to(sm){
+    min-height: $mobile-logo-row-height;
     height: $mobile-logo-row-height;
   }
 
