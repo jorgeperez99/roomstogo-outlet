@@ -18,7 +18,8 @@
           "alt":"",
           "title":""
         }
-      ]
+      ],
+      "mainImageUrl": "Livingroom_Header.jpg"
     }
   },
   { "routerUrl": "discount-living-rooms/sleeper-sofas",
@@ -40,7 +41,8 @@
           "alt":"",
           "title":""
         }
-      ]
+      ],
+      "mainImageUrl": "Livingroom_Header.jpg"
     }
   },
   { "routerUrl": "discount-dining-rooms/dining-room-sets",
@@ -51,7 +53,8 @@
         "Because most dining rooms center around the perfect table, it is pivotal to choose one that not only fits the room but one that you are pleased to eat at every day. Imagine family dinners seated around a cozy, traditional set, or visualize modernizing your living space with a chic contemporary discount dining room set. We sell affordable traditional, transitional, contemporary, and casual collections featuring your choice of rectangular, round, or square tabletop options as the centerpiece. Further customize your choice by selecting a tempered glass or wood-finished surface and counter or standard table heights.",
         "Don’t forget about our enticing yet inexpensive options with features such as convenient underside storage cubbies and leaf extensions. Have a particular finish or wood type in mind? We use quality crafted materials and offer plenty of color and finish options to satisfy even the most eccentric of tastes. Don’t needlessly waste your money on overpriced sets from other companies. Buy an exquisite discount dining room set from Rooms To Go Outlet today!"
       ],
-      "images": []
+      "images": [],
+      "mainImageUrl": "Dinning_Header.jpg"
     }
   },
   { "routerUrl": "discount-dining-rooms/tables",
@@ -63,63 +66,79 @@
         "Whether crafted from tempered glass, wood solids, or woven rattan, each dining table is designed with lasting durability in mind. You’ll find great deals on dining tables with convenient features, such as built-in drawers, wine racks, or leaves that expand the overall surface area. Choose Rooms To Go Outlet and pick out the perfect discount dining table to suit your style and budget.",
         "When searching for a new dining room table, it’s hard to find quality and style at an inexpensive price. Rooms To Go Outlet offers an extensive inventory with incredible deals on all styles of discount dining tables. Our large selection of warehouse overstock items allows us to offer our customers numerous style options at prices well below market value."
       ],
-      "images": []
+      "images": [],
+      "mainImageUrl": "Dinning_Header.jpg"
     }
   },
-  { "routerUrl": "discount-bedrooms/bedroom-sets",
+  {
+    "routerUrl": "discount-bedrooms/bedroom-sets",
     "content": {
       "title": "Discount Bedroom Sets",
       "details": [],
-      "images": []
+      "images": [],
+      "mainImageUrl": "Bedroom_Header.jpg"
     }
   },
-  { "routerUrl": "discount-bedrooms/queen-bedroom-sets",
+  {
+    "routerUrl": "discount-bedrooms/queen-bedroom-sets",
     "content": {
       "title": "Discount Queen Bed Sets",
       "details": [],
-      "imageUrls": []
+      "imageUrls": [],
+      "mainImageUrl": "Bedroom_Header.jpg"
     }
   },
-  { "routerUrl": "discount-leather/sofas",
+  {
+    "routerUrl": "discount-leather/sofas",
     "content": {
       "title": "Discount Leather Sodas",
       "details": [],
-      "images": []
+      "images": [],
+      "mainImageUrl": ""
     }
   },
-  { "routerUrl": "discount-leather/leather-loveseats",
+  {
+    "routerUrl": "discount-leather/leather-loveseats",
     "content": {
       "title": "Discount Leather Loveseats",
       "detail": "",
-      "images": []
+      "images": [],
+      "mainImageUrl": ""
     }
   },
-  { "routerUrl": "discount-mattress/queen-mattresses",
+  {
+    "routerUrl": "discount-mattress/queen-mattresses",
     "content": {
       "title": "Discount Queen Matresses",
       "detail": "",
-      "images": []
+      "images": [],
+      "mainImageUrl": ""
     }
   },
-  { "routerUrl": "discount-mattress/king-mattresses",
+  {
+    "routerUrl": "discount-mattress/king-mattresses",
     "content": {
       "title": "Discount King Matresses",
       "detail": "",
-      "images": []
+      "images": [],
+      "mainImageUrl": "matress.png"
     }
   },
-  { "routerUrl": "discount-home-decor/lamps",
+  {
+    "routerUrl": "discount-home-decor/lamps",
     "content": {
       "title": "Discount Home Decor Lamps",
       "detail": "",
-      "images": []
+      "images": [],
+      "mainImageUrl": ""
     }
   },
   { "routerUrl": "discount-home-decor/rugs",
     "content": {
       "title": "Discount Home Decor Rugs",
       "detail": "",
-      "images": []
+      "images": [],
+      "mainImageUrl": ""
     }
   }
 ]

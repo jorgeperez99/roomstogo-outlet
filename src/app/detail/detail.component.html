@@ -1,7 +1,7 @@
 <main class="container-fluid">
 
   <div class="row">
-    <div class="main-image-pane col-xs-12">
+    <div class="main-image-pane col-xs-12"  [style.background-image]="'url(../../assets/images/' + detail.mainImageUrl + ')'">
       <div class="title"><h2> {{ detail.title.toUpperCase() }}</h2></div>
     </div>
 

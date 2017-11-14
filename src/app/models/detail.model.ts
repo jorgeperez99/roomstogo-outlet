@@ -1,12 +1,14 @@
 export class Detail {
   routerUrl: string;
   content: DetailContent;
+
 }
 
 export class DetailContent {
   title: string;
   details: Array<string>;
   images: Array<Image>;
+  mainImageUrl: string;
 }
 
 export class Image {
