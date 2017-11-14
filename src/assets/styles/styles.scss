@@ -4,6 +4,10 @@
 
 @import "./variables";
 
+body, html {
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat','Open Sans', sans-serif;
   @include media-up-to(sm) {

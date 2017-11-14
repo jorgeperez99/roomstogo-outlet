@@ -5,7 +5,10 @@
             *ngIf="menuService.isVertical"
             [ngClass]="{'menu-close': !menuService.isOpen, 'menu-open': menuService.isOpen }">
   </app-menu>
-  <div class="vertical-menu-overlay"  [ngClass]="{'off': !menuService.isOpen }" >
-    <router-outlet></router-outlet>
+  <div class="vertical-menu-overlay router-outlet-wrapper"  [ngClass]="{'off': !menuService.isOpen }" >
+    <div class="router-outlet">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer class="footer"></app-footer>
   </div>
 

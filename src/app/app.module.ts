@@ -16,6 +16,7 @@ import {ScreenService} from './services/screen.service';
 import { DetailComponent } from './detail/detail.component';
 import {DetailService} from './services/detail.service';
 import {RouteService} from './services/route.service';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {RouteService} from './services/route.service';
     MenuComponent,
     MenuItemComponent,
     PopupMenuComponent,
-    DetailComponent
+    DetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

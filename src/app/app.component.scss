@@ -1,10 +1,10 @@
 @import "../assets/styles/variables";
 @import "../assets/styles/animation";
 
+
 .vertical-menu-overlay {
   @include filter(blur(3px));
   z-index: -1;
-  height: 100%;
   width: 100%;
   position: relative;
   @include transition(linear, filter, 1ms, $vertical-menu-animation-duration);
@@ -13,4 +13,24 @@
     @include filter(none);
   }
 
+}
+
+.router-outlet-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: calc(100% - #{$header-fixed-height});
+
+  .router-outlet {
+    flex-grow: 1;
+  }
+
+  .footer {
+    flex-grow: 0;
+  }
+
+  @include media-up-to(sm) {
+    // this is 100% because on mobile we do padding-top mobile-header-fixed-height because of fixed header
+    height: calc(100%);
+  }
 }

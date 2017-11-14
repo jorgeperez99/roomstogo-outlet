@@ -17,7 +17,7 @@ header {
 
 .switch-site {
   background: $color-blue;
-  height: 40px;
+  height: $switch-site-height;
 
   @include media-up-to(sm) {
     height: $mobile-switch-site-height;
@@ -76,6 +76,7 @@ header {
   border-bottom: $divider-border-lightgray;
   border-top: $divider-border-lightgray;
 
+  height: $logo-row-height;
   @include media-up-to(sm){
     height: $mobile-logo-row-height;
   }
