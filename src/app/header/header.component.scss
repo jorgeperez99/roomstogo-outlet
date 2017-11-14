@@ -76,7 +76,7 @@ header {
   border-bottom: $divider-border-lightgray;
   border-top: $divider-border-lightgray;
 
-  height: $logo-row-height;
+  min-height: $logo-row-height;
   @include media-up-to(sm){
     height: $mobile-logo-row-height;
   }
