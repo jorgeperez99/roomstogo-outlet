@@ -10,6 +10,11 @@
   background-color: #f3ede8;
   background-position: center -27px;
   min-height: 372px;
+
+  @include media-up-to(sm) {
+    min-height: 250px;
+  }
+
   .title {
     position: absolute;
     bottom: 0;
@@ -17,8 +22,18 @@
     left: 0;
     height: 75px;
     background-color: rgba(255,255,255, .5);
+
+    @include media-up-to(sm) {
+      text-align: center;
+    }
+
     h2 {
       margin-left: 55px;
+      color: $color-blue-font;
+
+      @include media-up-to(sm) {
+        margin-left: unset;
+      }
     }
   }
 
