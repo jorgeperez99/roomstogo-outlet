@@ -16,4 +16,5 @@ export class Image {
   alt: string;
   title: string;
   desc: string;
+  link: string;
 }

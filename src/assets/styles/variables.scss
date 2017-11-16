@@ -1,3 +1,5 @@
+//variables
+
 $color-blue: #00529f;
 $color-blue-font: #023b96;
 $color-navy: #25246b;
@@ -5,7 +7,7 @@ $color-white: #fff;
 $color-black: #000;
 $color-darkgray: #333;
 $color-lightgray: #d2d2d2;
-$color-super-lightgray: #e2e2e2;
+$color-super-lightgray: #e8e8e8;
 $color-green: #039058;
 
 $divider-border-lightgray: solid $color-lightgray .05em;
@@ -25,6 +27,7 @@ $mobile-header-fixed-height: $mobile-switch-site-height + $mobile-logo-row-heigh
 $vertical-menu-width: 75%;
 $vertical-menu-animation-duration: 150ms;
 
+//mixings
 
 @mixin media-up-to($media) {
   @if $media == lg {
@@ -63,6 +66,8 @@ $vertical-menu-animation-duration: 150ms;
   -ms-filter: $filter;
 }
 
+//text styling
+
 .smooth-text {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -75,6 +80,8 @@ $vertical-menu-animation-duration: 150ms;
   content:"\A";
   white-space:pre;
 }
+
+//custom card style
 
 .card {
   border: $divider-border-lightgray;
@@ -109,11 +116,30 @@ $vertical-menu-animation-duration: 150ms;
       font-size: 15px;
       font-weight: bold;
       color: $color-green;
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     a, button {
       cursor: pointer;
     }
   }
-;
+}
+
+//bootstrap grid helper
+
+.row-eq-height {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.row-top-padding {
+  margin-top: 20px;
+}
+
+.row-bottom-padding {
+  margin-bottom: 20px;
 }
