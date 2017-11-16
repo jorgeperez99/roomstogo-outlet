@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:b');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:b,300,400,500,700,400italic');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 //@import url('https://fonts.googleapis.com/css?family=Roboto:b');
 
@@ -30,4 +30,7 @@ body {
 
 h2 {
   font-size: 27px;
+  @include media-up-to(sm) {
+    font-size: 23px;
+  }
 }

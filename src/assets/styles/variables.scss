@@ -6,6 +6,8 @@ $color-black: #000;
 $color-darkgray: #333;
 $color-lightgray: #d2d2d2;
 $color-super-lightgray: #e2e2e2;
+$color-green: #039058;
+
 $divider-border-lightgray: solid $color-lightgray .05em;
 $header-box-shadow: 0px 0px 4px 0px rgba(0,0,0, .5);
 $box-shadow: 0px 2px 4px 0px rgba(80,80,80, .3);
@@ -69,16 +71,49 @@ $vertical-menu-animation-duration: 150ms;
   text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
+.word-break:before {
+  content:"\A";
+  white-space:pre;
+}
+
 .card {
   border: $divider-border-lightgray;
   border-color: $color-super-lightgray;
   box-shadow: $box-shadow;
 
-  .card-header {
+  .card-header, .card-content, .card-action {
     padding: 20px;
+    @include media-up-to(sm) {
+      padding: 15px;
+    }
+  }
+
+  .card-action {
+    padding-top: 10px;
+
+    @include media-up-to(sm) {
+      padding-top: 5px;
+    }
   }
 
   .card-image {
     min-height: 200px;
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
   }
+
+  .card-action {
+
+    a {
+      font-size: 15px;
+      font-weight: bold;
+      color: $color-green;
+    }
+
+    a, button {
+      cursor: pointer;
+    }
+  }
+;
 }

@@ -1,28 +1,27 @@
 <main class="container-fluid">
 
   <div class="row">
-    <div class="main-image-pane col-xs-12"  [style.background-image]="'url(../../assets/images/' + detail.mainImageUrl + ')'">
+    <div class="main-image-pane col-xs-12"  [style.background-image]="'url(../../assets/images/' + detail.mainImage.url + ')'">
       <div class="title"><h2> {{ detail.title.toUpperCase() }}</h2></div>
     </div>
 
   </div>
   <section class="row image-cards">
-    <div class="col-xs-4 card-wrapper" *ngFor="let image of detail.images">
+    <div class="col-xs-12 col-sm-6 col-md-4 card-wrapper" *ngFor="let image of detail.images">
       <div class="card">
         <div class="card-header">
           {{ image.alt }}
         </div>
-        <div class="card-image" [style.background-image]="'url(../../assets/images/' + image.url + ')'"><span>yy</span></div>
-        <div class="content-card">
-          <p>
+        <div class="card-image" [style.background-image]="'url(../../assets/images/' + image.url + ')'"></div>
+        <div class="card-content">
+
             The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
             A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
             bred for hunting.
-          </p>
+
         </div>
-        <div class="action-card">
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
+        <div class="card-action">
+          <a>View More Detail</a>
         </div>
       </div>
     </div>

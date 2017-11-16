@@ -37,6 +37,7 @@
 
       @include media-up-to(sm) {
         margin-left: unset;
+
       }
     }
   }
@@ -47,29 +48,30 @@
 
   .card-wrapper:first-child {
     .card {
-      margin-left: 15px;
+      //margin-left: 15px;
     }
   }
 
   .card-wrapper:last-child {
     .card {
-      margin-right: 15px;
+      //margin-right: 15px;
     }
   }
 }
 
 .card {
   margin-top: 30px;
-  margin-bottom: 30px;
+  @include media-up-to(sm) {
+    margin-top: 15px;
+  }
 }
 
-.content-card {
-  min-height: 100px;
+.card-image {
+  height: 340px;
+  background-size: 80% auto;
 }
 
-.action-card {
-  min-height: 100px;
-}
+
 
 article.detail {
   top: 0;

@@ -8,11 +8,12 @@ export class DetailContent {
   title: string;
   details: Array<string>;
   images: Array<Image>;
-  mainImageUrl: string;
+  mainImage: Image;
 }
 
 export class Image {
   url: string;
   alt: string;
   title: string;
+  desc: string;
 }
