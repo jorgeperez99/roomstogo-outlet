@@ -6,6 +6,27 @@
     </div>
 
   </div>
+  <section class="row image-cards">
+    <div class="col-xs-4 card-wrapper" *ngFor="let image of detail.images">
+      <div class="card">
+        <div class="card-header">
+          {{ image.alt }}
+        </div>
+        <div class="card-image" [style.background-image]="'url(../../assets/images/' + image.url + ')'"><span>yy</span></div>
+        <div class="content-card">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </div>
+        <div class="action-card">
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="row">
     <article *ngFor="let article of detail.details" class="col-xs-12 col-sm-4 detail">
       <p>{{ article }}</p>
@@ -18,7 +39,8 @@
         <mat-card-title>Shiba Inu</mat-card-title>
         <mat-card-subtitle>Dog Breed</mat-card-subtitle>
       </mat-card-header>
-      <!--<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+      <!--<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+      alt="Photo of a Shiba Inu">-->
       <mat-card-content>
         <p>
           The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
@@ -33,9 +55,9 @@
     </mat-card>
   </section>
   <section>
-    <article *ngFor="let img of detail.images">
-      <!--TODO: needs to get article and title from img also eventually  -->
-      <img [src]="img.url" [alt]="img.alt" [title]="img.title">
-    </article>
+    <!--<article *ngFor="let img of detail.images">-->
+      <!--&lt;!&ndash;TODO: needs to get article and title from img also eventually  &ndash;&gt;-->
+      <!--<img [src]="img.url" [alt]="img.alt" [title]="img.title">-->
+    <!--</article>-->
   </section>
 </main>

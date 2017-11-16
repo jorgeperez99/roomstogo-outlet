@@ -9,14 +9,19 @@
       ],
       "images": [
         {
-          "url": "",
-          "alt":"",
-          "title":""
+          "url": "livingroom-1.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
         },
         {
-          "url": "",
-          "alt":"",
-          "title":""
+          "url": "livingroom-2.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        },
+        {
+          "url": "livingroom-3.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
         }
       ],
       "mainImageUrl": "Livingroom_Header.jpg"
@@ -32,14 +37,19 @@
       ],
       "images": [
         {
-          "url": "",
-          "alt":"",
-          "title":""
+          "url": "livingroom-3.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
         },
         {
-          "url": "",
-          "alt":"",
-          "title":""
+          "url": "livingroom-2.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        },
+        {
+          "url": "livingroom-3.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
         }
       ],
       "mainImageUrl": "Livingroom_Header.jpg"
@@ -75,7 +85,28 @@
     "content": {
       "title": "Discount Bedroom Sets",
       "details": [],
-      "images": [],
+      "images": [
+        {
+          "url": "bedroom-0.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        },
+        {
+          "url": "bedroom-1.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        },
+        {
+          "url": "bedroom-2.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        },
+        {
+          "url": "bedroom-1.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        }
+      ],
       "mainImageUrl": "Bedroom_Header.jpg"
     }
   },
@@ -84,7 +115,28 @@
     "content": {
       "title": "Discount Queen Bed Sets",
       "details": [],
-      "imageUrls": [],
+      "images": [
+        {
+          "url": "bedroom-0.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        },
+        {
+          "url": "bedroom-1.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        },
+        {
+          "url": "bedroom-2.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        },
+        {
+          "url": "bedroom-3.png",
+          "alt":"sofa chair",
+          "title":"sofa chair"
+        }
+      ],
       "mainImageUrl": "Bedroom_Header.jpg"
     }
   },

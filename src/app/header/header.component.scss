@@ -103,7 +103,7 @@ header {
 
       @include media-up-to(sm) {
         margin: 8px auto;
-        @include img-keep-ratio(45px);
+        @include img-keep-ratio-height(45px);
       }
     }
   }

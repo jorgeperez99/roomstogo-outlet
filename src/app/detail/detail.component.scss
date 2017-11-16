@@ -11,8 +11,12 @@
   background-position: center -27px;
   min-height: 372px;
 
+  @include media-up-to(lg) {
+    min-height: 280px;
+  }
+
   @include media-up-to(sm) {
-    min-height: 250px;
+    min-height: 220px;
   }
 
   .title {
@@ -21,7 +25,7 @@
     right:0;
     left: 0;
     height: 75px;
-    background-color: rgba(255,255,255, .5);
+    background-color: rgba(215,215,210, .55);
 
     @include media-up-to(sm) {
       text-align: center;
@@ -29,7 +33,7 @@
 
     h2 {
       margin-left: 55px;
-      color: $color-blue-font;
+      color: darken($color-blue-font, 5%);
 
       @include media-up-to(sm) {
         margin-left: unset;
@@ -37,6 +41,34 @@
     }
   }
 
+}
+
+.image-cards {
+
+  .card-wrapper:first-child {
+    .card {
+      margin-left: 15px;
+    }
+  }
+
+  .card-wrapper:last-child {
+    .card {
+      margin-right: 15px;
+    }
+  }
+}
+
+.card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.content-card {
+  min-height: 100px;
+}
+
+.action-card {
+  min-height: 100px;
 }
 
 article.detail {
