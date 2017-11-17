@@ -112,8 +112,8 @@ header {
 .hamburger-close {
   font-size: 30px;
   color: $color-blue;
-  text-align: center;
-  padding-top: 10px;
+  position: absolute;
+  top: 10px;
 }
 
 .store-locator-pane {
@@ -139,12 +139,21 @@ header {
 
     @include media-up-to(sm) {
       color: $color-blue;
-      font-size: 33px;
+      font-size: 30px;
+      position: absolute;
+      right: 0;
+      top: 2px;
     }
   }
 
   .change-location {
     color: $color-blue;
+    font-weight: bold;
+
+    @include media-up-to(sm) {
+      position: absolute;
+      top: 12px;
+    }
   }
 }
 
