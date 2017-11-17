@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule,  } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -18,6 +17,9 @@ import { DetailComponent } from './detail/detail.component';
 import {DetailService} from './services/detail.service';
 import {RouteService} from './services/route.service';
 import {FooterComponent} from './footer/footer.component';
+import { ChangeLocationComponent } from './change-location/change-location.component';
+import {MaterialModule} from './material.module';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import {FooterComponent} from './footer/footer.component';
     MenuItemComponent,
     PopupMenuComponent,
     DetailComponent,
-    FooterComponent
+    FooterComponent,
+    ChangeLocationComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
+    MaterialModule,
     NoopAnimationsModule,
-    MatCardModule,
     RouterModule.forRoot([])
   ],
   providers: [
@@ -45,6 +49,6 @@ import {FooterComponent} from './footer/footer.component';
     DetailService
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ DetailComponent, FlierComponent ]
+  entryComponents: [ DetailComponent, FlierComponent, ChangeLocationComponent ]
 })
 export class AppModule { }

@@ -34,3 +34,17 @@ h2 {
     font-size: 23px;
   }
 }
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: inherit;
+
+}
+
+mat-dialog-container {
+  //position: absolute;
+  //left: 20%;
+  //top: $header-fixed-height + 50px;
+  background-color: white;
+  z-index: 100000;
+}

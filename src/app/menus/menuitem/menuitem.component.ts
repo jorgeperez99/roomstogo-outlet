@@ -56,7 +56,7 @@ export class MenuItemComponent implements OnInit {
       //   this.menuService.isOpen = false;
       // }
       if (this.menuService.isVertical) {
-        this.menuService.isOpen = false;
+        this.menuService.closeSideNav();
       } else {
         this.menuService.closeAllSubmenu();
       }

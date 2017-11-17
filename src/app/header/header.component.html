@@ -1,3 +1,11 @@
+<ng-template #locatorLink>
+  <div class="change-location" (click)="changeLocation()">
+    GA
+  </div>
+  <a href="https://www.roomstogo.com/storelocator" target="_blank">
+    <span class="hidden-xs">Store Locator</span><i class="ion-android-pin store-locator-icon"></i>
+  </a>
+</ng-template>
 <header class="container-fluid">
   <div class="row switch-site">
     <div class="col-sm-offset-1 col-xs-12 col-sm-11">
@@ -22,6 +30,30 @@
     <div class="logo-pane col-sm-offset-1 col-xs-8 col-sm-11">
       <img src="../../assets/images/logo.jpeg"  alt="Rooms TO Go Outlet Logo" title="Rooms TO Go Outlet Logo">
       <app-menu class="hidden-xs" *ngIf="!menuService.isVertical"></app-menu>
+      <div class="hidden-xs store-locator-pane"><ng-container *ngTemplateOutlet="locatorLink"></ng-container></div>
+
+      <!--<div>-->
+        <!--<ol>-->
+          <!--<li>-->
+            <!--<mat-form-field>-->
+              <!--<input matInput [(ngModel)]="name" placeholder="What's your name?">-->
+            <!--</mat-form-field>-->
+          <!--</li>-->
+          <!--<li>-->
+            <!--<button mat-raised-button (click)="openDialog()">Pick one</button>-->
+          <!--</li>-->
+          <!--<li *ngIf="animal">-->
+            <!--You chose: <i>{{animal}}</i>-->
+          <!--</li>-->
+        <!--</ol>-->
+
+
+      <!--</div>-->
+
+
+    </div>
+    <div class="col-xs-2 hidden-sm hidden-lg hidden-md">
+      <div class="store-locator-pane"><ng-container *ngTemplateOutlet="locatorLink"></ng-container></div>
     </div>
   </div>
 </header>

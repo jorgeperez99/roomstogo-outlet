@@ -1,0 +1,6 @@
+@import "../../assets/styles/variables";
+
+:host {
+  z-index: 1001;
+  background: $color-white;
+}

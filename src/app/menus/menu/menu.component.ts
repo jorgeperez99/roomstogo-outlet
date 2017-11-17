@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
     event.stopPropagation();
 
 
-    this.menuService.isOpen = false;
+    this.menuService.closeSideNav();
 
     console.log('menu c clicked');
   }

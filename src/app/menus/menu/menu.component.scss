@@ -7,14 +7,18 @@
   flex-grow: 1;
   align-self: flex-end;
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+  nav {
+    display: inline-block;
 
-  li {
-    display: inline;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+    }
   }
 
 }
@@ -32,6 +36,7 @@
   nav {
     margin: 0;
     padding: 0;
+    display: block;
 
     ul {
       margin: 0;

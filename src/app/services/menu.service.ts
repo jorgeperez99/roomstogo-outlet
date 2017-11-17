@@ -35,7 +35,22 @@ export class MenuService implements OnDestroy {
   }
 
   toggleSideNav() {
-    this.isOpen = !this.isOpen;
+    // this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.closeSideNav();
+    } else {
+      this.openSideNav();
+    }
+  }
+
+  closeSideNav() {
+    this.isOpen = false;
+    setTimeout(() => this.isVertical = false, 100);
+  }
+
+  openSideNav() {
+    this.isOpen = true;
+    this.isVertical = true;
   }
 
   hydrateItems() {

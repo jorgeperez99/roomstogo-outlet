@@ -116,5 +116,37 @@ header {
   padding-top: 10px;
 }
 
+.store-locator-pane {
+  position: absolute;
+  top:-5px;
+  right:15px;
+  color: $color-white;
+  font-size: 15px;
+  background-color: $color-blue;
+  padding:3px 15px;
+
+  @include media-up-to(sm) {
+    background-color: transparent;
+    padding: 0;
+    top: 8px;
+    right: 0;
+    position: relative;
+  }
+
+  .store-locator-icon {
+    font-size: 27px;
+    margin-left: 6px;
+
+    @include media-up-to(sm) {
+      color: $color-blue;
+      font-size: 33px;
+    }
+  }
+
+  .change-location {
+    color: $color-blue;
+  }
+}
+
 
 
