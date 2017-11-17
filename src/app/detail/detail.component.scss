@@ -44,22 +44,30 @@
 
 }
 
-.card {
-  margin-top: 20px;
+.card-wrapper {
+  //margin-top: 20px;
   @include media-up-to(sm) {
-    margin-top: 15px;
+    // margin-top: 15px;
+  }
+}
+
+.card {
+  height:100%;
+  //margin-top: 20px;
+  @include media-up-to(sm) {
+   // margin-top: 15px;
   }
 }
 
 .card-image {
-  height: 340px;
-  background-size: 80% auto;
+
+
 }
 
 
 .details {
-  @extend .row-top-padding;
-  @extend .row-bottom-padding;
+  //@extend .top-padding;
+  //@extend .bottom-padding;
   background-color: $color-super-lightgray;
 
   .detail {

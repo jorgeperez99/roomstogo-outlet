@@ -14,6 +14,7 @@ $divider-border-lightgray: solid $color-lightgray .05em;
 $header-box-shadow: 0px 0px 4px 0px rgba(0,0,0, .5);
 $box-shadow: 0px 2px 4px 0px rgba(80,80,80, .3);
 
+$row-col-spacing-height: 20px;
 
 $switch-site-height: 40px;
 $mobile-switch-site-height: 25px;
@@ -104,10 +105,10 @@ $vertical-menu-animation-duration: 150ms;
   }
 
   .card-image {
-    min-height: 200px;
-    background-position: center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+    img {
+      margin: auto;
+      display: block;
+    }
   }
 
   .card-action {
@@ -136,10 +137,18 @@ $vertical-menu-animation-duration: 150ms;
   flex-wrap: wrap;
 }
 
-.row-top-padding {
-  margin-top: 20px;
+.top-padding {
+  padding-top: $row-col-spacing-height;
 }
 
-.row-bottom-padding {
-  margin-bottom: 20px;
+.bottom-padding {
+  padding-bottom: $row-col-spacing-height
+}
+
+.top-margin {
+  margin-top: $row-col-spacing-height
+}
+
+.bottom-margin {
+  margin-bottom: $row-col-spacing-height
 }

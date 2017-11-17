@@ -6,13 +6,15 @@
     </div>
 
   </div>
-  <section class="row image-cards">
-    <div class="col-xs-12 col-sm-6 col-md-4 card-wrapper" *ngFor="let image of detail.images">
+  <section class="row image-cards row-eq-height ">
+    <div class="col-xs-12 col-sm-6 col-md-4 card-wrapper top-padding" *ngFor="let image of detail.images">
       <div class="card">
         <div class="card-header">
           {{ image.alt }}
         </div>
-        <div class="card-image" [style.background-image]="'url(../../assets/images/' + image.url + ')'"></div>
+        <div class="card-image">
+          <img [src]="'../../assets/images/' + image.url " [alt]="image.alt" [title]="image.title">
+        </div>
         <div class="card-content">
           {{ image.desc }}
         </div>
@@ -22,7 +24,7 @@
       </div>
     </div>
   </section>
-  <section class="row row-eq-height details">
+  <section class="row row-eq-height details top-margin">
     <article *ngFor="let article of detail.details" class="col-xs-12 col-sm-4 detail">
       <div>{{ article }}</div>
     </article>
