@@ -2,18 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 //@import url('https://fonts.googleapis.com/css?family=Roboto:b');
 
-//below are Material stuff
+//below are Material stuff //TODO: Once we use mat extensively figure out why theme is not loading.
 //@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 //@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,400italic');
-
-//
-//<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-//<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,400italic');
 
 @import "./variables";
+@import "./matDialog";
+
 
 body, html {
   height: 100%;
@@ -39,12 +36,4 @@ a, a:hover, a:visited, a:active {
   color: inherit;
   text-decoration: inherit;
 
-}
-
-mat-dialog-container {
-  position: fixed;
-  left: 20%;
-  top: $header-fixed-height + 50px;
-  background-color: white;
-  z-index: 100000;
 }

@@ -1,0 +1,17 @@
+mat-dialog-container {
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  top: $mobile-header-fixed-height;
+  background-color: white;
+  z-index: 999;
+}
+
+.modal-backdrop {
+  background-color: transparent;
+}
+
+.modal-panel {
+  background-color: red;
+  color: blue;
+}

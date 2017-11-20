@@ -27,7 +27,10 @@ export class HeaderComponent implements OnInit {
     const dialogRef = this.dialog.open(ChangeLocationComponent, {
       width: '350px',
       hasBackdrop: true,
+      backdropClass: 'modal-backdrop',
+      panelClass: 'modal-panel',
       data: {name: this.name , animal: this.animal}
+
     });
 
     dialogRef.afterClosed().subscribe(result => {
