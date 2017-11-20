@@ -176,7 +176,9 @@
       "title": "Discount Leather Sodas",
       "details": [],
       "images": [],
-      "mainImage": ""
+      "mainImage": {
+        "url": ""
+      }
     }
   },
   {

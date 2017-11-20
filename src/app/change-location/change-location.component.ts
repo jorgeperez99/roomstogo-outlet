@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+
 
 @Component({
   selector: 'app-change-location',
@@ -8,13 +8,13 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 })
 export class ChangeLocationComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<ChangeLocationComponent>, @Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
   onNoClick(): void {
-    this.dialogRef.close();
+    // this.dialogRef.close();
   }
 
 }

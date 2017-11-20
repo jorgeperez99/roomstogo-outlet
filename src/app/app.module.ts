@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import {InjectionToken, NgModule} from '@angular/core';
 import { BrowserModule,  } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -18,8 +18,12 @@ import {DetailService} from './services/detail.service';
 import {RouteService} from './services/route.service';
 import {FooterComponent} from './footer/footer.component';
 import { ChangeLocationComponent } from './change-location/change-location.component';
-import {MaterialModule} from './material.module';
-import {FormsModule} from '@angular/forms';
+import {JQ_TOKEN} from './services/jquery.service';
+import {SimpleModalComponent} from './modal/simple-modal/simple-modal.component';
+import { ModalTriggerDirective } from './modal/modal-trigger.directive';
+
+
+declare let jQuery: Object;
 
 @NgModule({
   declarations: [
@@ -31,14 +35,14 @@ import {FormsModule} from '@angular/forms';
     PopupMenuComponent,
     DetailComponent,
     FooterComponent,
-    ChangeLocationComponent
+    ChangeLocationComponent,
+    SimpleModalComponent,
+    ModalTriggerDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
-    NoopAnimationsModule,
     RouterModule.forRoot([])
   ],
   providers: [
@@ -46,9 +50,14 @@ import {FormsModule} from '@angular/forms';
     WindowRefService,
     ScreenService,
     MenuService,
-    DetailService
+    DetailService,
+    { provide: JQ_TOKEN, useFactory: jQueryFactory }
   ],
   bootstrap: [AppComponent],
   entryComponents: [ DetailComponent, FlierComponent, ChangeLocationComponent ]
 })
 export class AppModule { }
+
+export function jQueryFactory() {
+  return jQuery;
+}
