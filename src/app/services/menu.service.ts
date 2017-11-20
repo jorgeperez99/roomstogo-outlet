@@ -15,8 +15,8 @@ export class MenuService implements OnDestroy {
   screenSubscription: Subscription;
 
   constructor(private http: Http, private screenService: ScreenService) {
-    this.reset();
-    this.screenSubscription = screenService.screenResize$.subscribe(() => this.reset());
+    this.reset(screenService.isLarge);
+    this.screenSubscription = screenService.screenResizeIsLarge$.subscribe((isLarge: boolean) => this.reset(isLarge));
   }
 
 
@@ -24,8 +24,8 @@ export class MenuService implements OnDestroy {
     this.screenSubscription.unsubscribe();
   }
 
-  private reset () {
-    if (this.screenService.isLarge) {
+  private reset (isLarge: boolean) {
+    if (isLarge) {
       this.isVertical = false;
       this.isOpen = false;
     } else {

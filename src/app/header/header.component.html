@@ -1,6 +1,6 @@
 <ng-template #locatorLink>
-  <button class="change-location" appModalTrigger="changeLocation">
-    GA
+  <button class="change-location" appModalTrigger="changeLocation" [style.background-image]="'url(../../assets/svgs/state_' + userState + desktop +'.svg)'">
+    {{ userState }}
   </button>
   <a class="store-locator-link" href="https://www.roomstogo.com/storelocator" target="_blank">
     <span class="hidden-xs">Store Locator</span><i class="ion-android-pin store-locator-icon"></i>

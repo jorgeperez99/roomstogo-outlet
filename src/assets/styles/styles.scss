@@ -35,5 +35,11 @@ h2 {
 a, a:hover, a:visited, a:active {
   color: inherit;
   text-decoration: inherit;
-
 }
+
+input[type="button"], input[type="button"]:focus, input[type="button"]::-moz-focus-inner, button, button::-moz-focus-inner {
+  color: inherit;
+  border: none;
+  outline: none;
+}
+

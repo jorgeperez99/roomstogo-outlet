@@ -9,7 +9,7 @@ export class ScreenService {
   largeBreakpoint = 750;
   screenWidth = 1000;
   screenHeight = 800;
-  screenResize$: Subject<null> = new  Subject<null>();
+  screenResizeIsLarge$: BehaviorSubject<boolean> = new  BehaviorSubject(null);
 
   constructor(private windowRef: WindowRefService) {
     try {
@@ -28,7 +28,7 @@ export class ScreenService {
 
   private recalculate () {
     this.setScreenSize();
-    this.screenResize$.next();
+    this.screenResizeIsLarge$.next(this.isLarge);
   }
 
   onResize ($event): void {

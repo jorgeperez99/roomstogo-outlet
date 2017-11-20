@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WindowRefService } from '../services/window-ref.service';
 import { MenuService } from '../services/menu.service';
 import {ChangeLocationComponent} from '../change-location/change-location.component';
+import {ScreenService} from '../services/screen.service';
 
 @Component({
   selector: 'app-header',
@@ -10,12 +11,19 @@ import {ChangeLocationComponent} from '../change-location/change-location.compon
 })
 export class HeaderComponent implements OnInit {
 
-  animal: string;
-  name: string;
+  userState = 'GA';
+  desktop = '_desktop'
 
-  constructor(private menuService: MenuService) { }
+  constructor(private screenService: ScreenService, public menuService: MenuService) { }
 
   ngOnInit() {
+    this.screenService.screenResizeIsLarge$.subscribe((isLarge: boolean) => {
+      if (isLarge) {
+        this.desktop = '_desktop';
+      } else {
+        this.desktop = '';
+      }
+    });
   }
 
   openDialog(): void {
