@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { WindowRefService } from '../services/window-ref.service';
 import { MenuService } from '../services/menu.service';
 import {ChangeLocationComponent} from '../change-location/change-location.component';
@@ -10,12 +10,13 @@ import {ScreenService} from '../services/screen.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  @ViewChild(ChangeLocationComponent) changeLocationComponent: ChangeLocationComponent;
   userState = 'FL';
   desktop = '_desktop';
- changeLocationSaveCallback = () => {
-   this.userState = 'GA';
- }
+
+  changeLocationSaveCallback = () => {
+   this.userState = this.changeLocationComponent.userState;
+  }
 
   constructor(private screenService: ScreenService, public menuService: MenuService) { }
 
@@ -34,20 +35,6 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  changeLocation() {
-    // const dialogRef = this.dialog.open(ChangeLocationComponent, {
-    //   width: '350px',
-    //   hasBackdrop: true,
-    //   backdropClass: 'modal-backdrop',
-    //   panelClass: 'modal-panel',
-    //   data: {name: this.name , animal: this.animal}
-    //
-    // });
-    //
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('dialog is closed');
-    //   this.animal = result;
-    // });
-  }
+
 
 }

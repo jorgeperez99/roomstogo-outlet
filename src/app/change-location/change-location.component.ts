@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 
 
 @Component({
@@ -7,6 +7,8 @@ import {Component, Inject, OnInit} from '@angular/core';
   styleUrls: ['./change-location.component.scss']
 })
 export class ChangeLocationComponent implements OnInit {
+
+  @Input() userState: string;
 
   constructor() { }
 
