@@ -15,7 +15,6 @@
 
 .modal-dialog {
   top: $header-fixed-height + 25px;
-  margin: 15px;
 
   @include media-up-to(sm) {
     top: $mobile-header-fixed-height + 20px;
