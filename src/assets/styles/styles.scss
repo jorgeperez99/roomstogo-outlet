@@ -43,3 +43,18 @@ input[type="button"], input[type="button"]:focus, input[type="button"]::-moz-foc
   outline: none;
 }
 
+//bootstrap override
+.btn {
+  border-radius: 0;
+
+  &.btn-primary {
+    background-color: $color-blue;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+}
+
+.form-control {
+  border-radius: 0;
+}
+

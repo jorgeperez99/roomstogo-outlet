@@ -1,1 +1,51 @@
-.modal-body { height: 250px; overflow-y: scroll; }
+@import "../../../assets/styles/variables";
+
+.modal {
+
+  .modal-dialog {
+
+    //&.vertical-middle {
+    //  position: fixed;
+    //  bottom: 50%;
+    //  right: 50%;
+    //  transform: translate(50%, 50%);
+    //}
+  }
+}
+
+.modal-dialog {
+  top: $header-fixed-height + 25px;
+  margin: 15px;
+
+  @include media-up-to(sm) {
+    top: $mobile-header-fixed-height + 20px;
+  }
+}
+
+.modal-body {
+  min-height: 250px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+
+  @include media-up-to(sm) {
+    min-height: 150px;
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+  border-color: $color-lightgray;
+}
+
+.modal-header {
+  color: $color-blue;
+  padding: 10px 15px;
+
+  h4 {
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+}
+
+

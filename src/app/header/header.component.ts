@@ -11,8 +11,11 @@ import {ScreenService} from '../services/screen.service';
 })
 export class HeaderComponent implements OnInit {
 
-  userState = 'GA';
-  desktop = '_desktop'
+  userState = 'FL';
+  desktop = '_desktop';
+ changeLocationSaveCallback = () => {
+   this.userState = 'GA';
+ }
 
   constructor(private screenService: ScreenService, public menuService: MenuService) { }
 
@@ -24,6 +27,7 @@ export class HeaderComponent implements OnInit {
         this.desktop = '';
       }
     });
+
   }
 
   openDialog(): void {

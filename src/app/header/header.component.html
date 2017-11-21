@@ -42,6 +42,10 @@
   </div>
 </header>
 
-<app-simple-modal closeOnBodyClick="true" elementId="changeLocation" title="Change Location">
+<app-simple-modal  closeOnBodyClick="true"
+                   elementId="changeLocation"
+                   title="Change Location"
+                   [saveCallback]="changeLocationSaveCallback"
+>
   <app-change-location></app-change-location>
 </app-simple-modal>
