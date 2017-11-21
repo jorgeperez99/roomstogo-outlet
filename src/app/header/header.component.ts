@@ -15,7 +15,9 @@ export class HeaderComponent implements OnInit {
   desktop = '_desktop';
 
   changeLocationSaveCallback = () => {
-   this.userState = this.changeLocationComponent.userState;
+
+   const userZip = this.changeLocationComponent.userZip;
+
   }
 
   constructor(private screenService: ScreenService, public menuService: MenuService) { }

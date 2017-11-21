@@ -148,11 +148,11 @@ header {
     color: $color-blue;
     font-weight: bold;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 6px 7px;
     background-color: transparent;
     border: none;
-    width: 54px;
-    height: 60px;
+    width: 61px;
+    height: 61px;
     padding-left: 15px;
     @include media-up-to(sm) {
 

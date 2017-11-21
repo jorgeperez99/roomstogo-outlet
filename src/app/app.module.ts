@@ -1,7 +1,7 @@
 import {InjectionToken, NgModule} from '@angular/core';
 import { BrowserModule,  } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {HttpModule, RequestOptions, XHRBackend} from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -21,9 +21,17 @@ import { ChangeLocationComponent } from './change-location/change-location.compo
 import {JQ_TOKEN} from './services/jquery.service';
 import {SimpleModalComponent} from './modal/simple-modal/simple-modal.component';
 import { ModalTriggerDirective } from './modal/modal-trigger.directive';
+import {HttpService} from './services/http.service';
 
 
 declare let jQuery: Object;
+
+export function httpService(
+  backend: XHRBackend,
+  defaultOptions: RequestOptions,
+) {
+  return new HttpService(backend, defaultOptions);
+}
 
 @NgModule({
   declarations: [
@@ -51,7 +59,8 @@ declare let jQuery: Object;
     ScreenService,
     MenuService,
     DetailService,
-    { provide: JQ_TOKEN, useFactory: jQueryFactory }
+    { provide: JQ_TOKEN, useFactory: jQueryFactory },
+    { provide: HttpService, useFactory: httpService, deps: [XHRBackend, RequestOptions] }
   ],
   bootstrap: [AppComponent],
   entryComponents: [ DetailComponent, FlierComponent, ChangeLocationComponent ]

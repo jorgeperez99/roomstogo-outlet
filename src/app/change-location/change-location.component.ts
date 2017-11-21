@@ -9,6 +9,7 @@ import {Component, Inject, Input, OnInit} from '@angular/core';
 export class ChangeLocationComponent implements OnInit {
 
   @Input() userState: string;
+  userZip: number;
 
   constructor() { }
 

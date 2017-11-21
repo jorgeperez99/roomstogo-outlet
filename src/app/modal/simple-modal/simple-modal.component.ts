@@ -12,6 +12,7 @@ export class SimpleModalComponent implements OnInit {
   @Input() title: string;
   @Input() elementId: string;
   @Input() modalBodyHeight = '250px';
+  @Input() saveButtonText = 'Save';
   @Input() saveCallback = () => null;
 
   constructor(@Inject(JQ_TOKEN) private $: any, public menuService: MenuService) { }
@@ -26,7 +27,10 @@ export class SimpleModalComponent implements OnInit {
   // }
 
   save () {
+
+    // TODO: chi I don't like this just emit event and do @Output to notice save happened.
     this.saveCallback();
+
     this.$(this.containerEl.nativeElement).modal('hide');
   }
 
