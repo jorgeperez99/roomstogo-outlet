@@ -46,10 +46,24 @@
 <app-simple-modal  elementId="changeLocation"
                    title="Change Location"
                    [modalSize]="modalSizeEnum.Small"
-                   (primaryBtnClick)="saveLocation()"
->
+                   (primaryBtnClick)="saveLocation()">
+
   <div class="location-modal">
+    <form #changeLocationForm="ngForm">
+
     <label for="zip">Your zip code</label>
-    <input class="form-control" name="zip" id="zip" type="text" placeholder="Zip Code" [(ngModel)]="userZip">
+    <input class="form-control"
+           name="zip" id="zip" type="text"
+           placeholder="5 Digit Zip Code"
+           [(ngModel)]="userZip" #zip="ngModel"
+           pattern="[0-9]{5}">
+
+    <div [hidden]="zip.valid || zip.pristine"
+         class="alert alert-danger">
+      Must be 5 digit zip code.
+    </div>
+
+    </form>
   </div>
+
 </app-simple-modal>

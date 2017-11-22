@@ -14,6 +14,7 @@ export class SimpleModalComponent implements OnInit {
   @Input() elementId: string;
   @Input() saveButtonText = 'Save';
   @Input() modalSize: number;
+  @Input() modalMinHeight = '100px';
   @Output() primaryBtnClick: EventEmitter<any> = new EventEmitter();
 
   modalSizeEnum = ModalSizeEnum;

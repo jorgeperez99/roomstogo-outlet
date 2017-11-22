@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import { WindowRefService } from '../services/window-ref.service';
 import { MenuService } from '../services/menu.service';
-import {ChangeLocationComponent} from '../change-location/change-location.component';
 import {ScreenService} from '../services/screen.service';
 import {GoogleMapService} from '../services/google-map.service';
 import {GoogleMapAddressDto} from '../models/dtos/googlemap.model';
@@ -13,7 +12,6 @@ import {ModalSizeEnum} from '../modal/simple-modal/simple-modal.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild(ChangeLocationComponent) changeLocationComponent: ChangeLocationComponent;
   userState = 'FL';
   userZip: number;
   desktop = '_desktop';

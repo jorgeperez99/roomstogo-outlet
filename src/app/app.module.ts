@@ -17,7 +17,6 @@ import { DetailComponent } from './detail/detail.component';
 import {DetailService} from './services/detail.service';
 import {RouteService} from './services/route.service';
 import {FooterComponent} from './footer/footer.component';
-import { ChangeLocationComponent } from './change-location/change-location.component';
 import {JQ_TOKEN} from './services/jquery.service';
 import {SimpleModalComponent} from './modal/simple-modal/simple-modal.component';
 import { ModalTriggerDirective } from './modal/modal-trigger.directive';
@@ -44,7 +43,6 @@ export function httpService(
     PopupMenuComponent,
     DetailComponent,
     FooterComponent,
-    ChangeLocationComponent,
     SimpleModalComponent,
     ModalTriggerDirective
   ],
@@ -65,7 +63,7 @@ export function httpService(
     { provide: HttpService, useFactory: httpService, deps: [XHRBackend, RequestOptions] }
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ DetailComponent, FlierComponent, ChangeLocationComponent ]
+  entryComponents: [ DetailComponent, FlierComponent ]
 })
 export class AppModule { }
 
