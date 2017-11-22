@@ -1,8 +1,8 @@
-export class MenuItem {
+export class MenuItemDto {
   text: string;
   icon: string; // glyphiicon class
   route: string;
-  submenu: Array<MenuItem>;
+  submenu: Array<MenuItemDto>;
   submenuLink?: string;
   submenuOpen?: boolean;
 }

@@ -3,6 +3,8 @@ import { WindowRefService } from '../services/window-ref.service';
 import { MenuService } from '../services/menu.service';
 import {ChangeLocationComponent} from '../change-location/change-location.component';
 import {ScreenService} from '../services/screen.service';
+import {GoogleMapService} from '../services/google-map.service';
+import {GoogleMapAddressDto} from '../models/dtos/googlemap.model';
 
 @Component({
   selector: 'app-header',
@@ -14,13 +16,12 @@ export class HeaderComponent implements OnInit {
   userState = 'FL';
   desktop = '_desktop';
 
-  changeLocationSaveCallback = () => {
 
-   const userZip = this.changeLocationComponent.userZip;
+  constructor(private screenService: ScreenService,
+              public menuService: MenuService,
+              private googleMapService: GoogleMapService ) {
 
   }
-
-  constructor(private screenService: ScreenService, public menuService: MenuService) { }
 
   ngOnInit() {
     this.screenService.screenResizeIsLarge$.subscribe((isLarge: boolean) => {
@@ -30,13 +31,19 @@ export class HeaderComponent implements OnInit {
         this.desktop = '';
       }
     });
-
   }
 
-  openDialog(): void {
+  saveLocation() {
+    const userZip = this.changeLocationComponent.userZip;
+    this.googleMapService.getAddressFromZip(userZip)
+      .subscribe((address: GoogleMapAddressDto) => {
+        console.log('address...', address);
+        const stateAddress = address.address_components.find(ac => {
+          const stateType = ac.types.find(t => t === 'administrative_area_level_1');
+          return !!stateType;
+        });
 
+        this.userState = stateAddress.short_name;
+      });
   }
-
-
-
 }

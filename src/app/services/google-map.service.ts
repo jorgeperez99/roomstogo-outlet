@@ -6,18 +6,18 @@ import 'rxjs/add/operator/finally';
 import 'rxjs/add/observable/throw';
 
 import {HttpService, RequestHelper} from './http.service';
+import {Http} from '@angular/http';
+import {GoogleMapAddressDto} from '../models/dtos/googlemap.model';
 
 @Injectable()
 export class GoogleMapService {
 
-  constructor(private http: HttpService) {
+  constructor(private http: Http) {
 
   }
 
-  getAddressFromZip (zip: number): Observable<any> {
+  getAddressFromZip (zip: number): Observable<GoogleMapAddressDto> {
    const zipToAddressUrl = `http://maps.googleapis.com/maps/api/geocode/json?address=${ zip }&sensor=true`;
-   return this.http.get(zipToAddressUrl).map(RequestHelper.extractData);
+   return this.http.get(zipToAddressUrl).map(RequestHelper.extractObject);
   }
-
-
 }

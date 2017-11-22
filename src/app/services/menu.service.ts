@@ -1,6 +1,6 @@
 import {Injectable, OnDestroy, OnInit} from '@angular/core';
 import { Http } from '@angular/http';
-import { MenuItem } from '../models/menuitem.model';
+import { MenuItemDto } from '../models/dtos/menuitem.model';
 import {WindowRefService} from './window-ref.service';
 import {Subject} from 'rxjs/Subject';
 import {ScreenService} from './screen.service';
@@ -9,7 +9,7 @@ import {Subscription} from 'rxjs/Subscription';
 
 @Injectable()
 export class MenuService implements OnDestroy {
-  items: Array<MenuItem>;
+  items: Array<MenuItemDto>;
   isVertical = false;
   isOpen = false;
   screenSubscription: Subscription;
@@ -62,7 +62,7 @@ export class MenuService implements OnDestroy {
     this.closeAllSubmenuRecursive(this.items);
   }
 
-  private closeAllSubmenuRecursive(items: Array<MenuItem>): void {
+  private closeAllSubmenuRecursive(items: Array<MenuItemDto>): void {
     items.forEach(item => {
       item.submenuOpen = false;
       if (item.submenu) {

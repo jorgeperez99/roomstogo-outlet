@@ -1,4 +1,4 @@
-import {Component, ElementRef, Inject, Injector, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Inject, Injector, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {JQ_TOKEN } from '../../services/jquery.service';
 import {MenuService} from '../../services/menu.service';
 
@@ -13,25 +13,16 @@ export class SimpleModalComponent implements OnInit {
   @Input() elementId: string;
   @Input() modalBodyHeight = '250px';
   @Input() saveButtonText = 'Save';
-  @Input() saveCallback = () => null;
+  @Output() primaryBtnClick: EventEmitter<any> = new EventEmitter();
 
   constructor(@Inject(JQ_TOKEN) private $: any, public menuService: MenuService) { }
 
   ngOnInit() {
   }
 
-  // closeModal() {
-  //   if (this.closeOnBodyClick) {
-  //     this.$(this.containerEl.nativeElement).modal('hide');
-  //   }
-  // }
-
-  save () {
-
-    // TODO: chi I don't like this just emit event and do @Output to notice save happened.
-    this.saveCallback();
-
+  onPrimaryBtnClick () {
     this.$(this.containerEl.nativeElement).modal('hide');
+    this.primaryBtnClick.emit();
   }
 
 }

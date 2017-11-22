@@ -22,6 +22,7 @@ import {JQ_TOKEN} from './services/jquery.service';
 import {SimpleModalComponent} from './modal/simple-modal/simple-modal.component';
 import { ModalTriggerDirective } from './modal/modal-trigger.directive';
 import {HttpService} from './services/http.service';
+import {GoogleMapService} from './services/google-map.service';
 
 
 declare let jQuery: Object;
@@ -59,6 +60,7 @@ export function httpService(
     ScreenService,
     MenuService,
     DetailService,
+    GoogleMapService,
     { provide: JQ_TOKEN, useFactory: jQueryFactory },
     { provide: HttpService, useFactory: httpService, deps: [XHRBackend, RequestOptions] }
   ],

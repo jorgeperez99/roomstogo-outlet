@@ -2103,7 +2103,7 @@ Detects the ability to use round and space as properties for background-repeat
 
 /*!
 {
-  "name": "Border Image",
+  "name": "Border ImageDto",
   "property": "borderimage",
   "caniuse": "border-image",
   "polyfills": ["css3pie"],

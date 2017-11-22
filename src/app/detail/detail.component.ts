@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {DetailService} from '../services/detail.service';
-import {DetailContent} from '../models/detail.model';
+import {DetailContentDto} from '../models/dtos/detail.model';
 
 @Component({
   selector: 'app-detail',
@@ -10,12 +10,12 @@ import {DetailContent} from '../models/detail.model';
 })
 export class DetailComponent implements OnInit {
 
-  detail: DetailContent;
+  detail: DetailContentDto;
 
   constructor(private router: Router, private detailService: DetailService) { }
 
   ngOnInit() {
-    this.detailService.getDetail(this.router.url).subscribe((detail: DetailContent) => {
+    this.detailService.getDetail(this.router.url).subscribe((detail: DetailContentDto) => {
       this.detail = detail;
     });
   }

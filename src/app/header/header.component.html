@@ -45,7 +45,7 @@
 <app-simple-modal  closeOnBodyClick="true"
                    elementId="changeLocation"
                    title="Change Location"
-                   [saveCallback]="changeLocationSaveCallback"
+                   (primaryBtnClick)="saveLocation()"
 >
   <app-change-location [userState]="userState"></app-change-location>
 </app-simple-modal>
