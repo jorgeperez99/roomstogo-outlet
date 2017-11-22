@@ -14,3 +14,7 @@ export const StorageHelper = {
 
   userLocationKey: 'userLocationKey'
 };
+
+export const StorageKeys = {
+  userInfo: 'userInfo'
+}

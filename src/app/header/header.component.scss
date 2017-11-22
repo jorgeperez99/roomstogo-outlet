@@ -91,8 +91,11 @@ header {
   }
 
   .logo-pane {
-    display: flex;
-    flex-wrap: wrap;
+
+    @include media-up-to(sm) {
+      padding: 0;
+      position: relative;
+    }
 
     img {
       margin: 20px 40px 10px 0;
@@ -102,8 +105,8 @@ header {
       }
 
       @include media-up-to(sm) {
-        margin: 14px auto;
-        @include img-keep-ratio-height(36px);
+        @include img-keep-ratio-height(40px);
+        margin: 10px auto;
       }
     }
   }
@@ -174,7 +177,7 @@ header {
     border: none;
     width: 55px;
     height: 58px;
-    padding-left: 15px;
+    padding: 0;
     display: inline-block;
     float: left;
     font-size: 25px;

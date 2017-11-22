@@ -5,6 +5,8 @@ import {ScreenService} from '../services/screen.service';
 import {GoogleMapService} from '../services/google-map.service';
 import {GoogleMapAddressDto} from '../models/dtos/googlemap.model';
 import {ModalSizeEnum} from '../modal/simple-modal/simple-modal.component';
+import {StorageHelper, StorageKeys} from '../helpers/storage.helper';
+import {UserInfoDto} from '../models/dtos/user.model';
 
 @Component({
   selector: 'app-header',
@@ -12,10 +14,11 @@ import {ModalSizeEnum} from '../modal/simple-modal/simple-modal.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  userState = 'FL';
   userZip: number;
   desktop = '_desktop';
   modalSizeEnum = ModalSizeEnum;
+
+  userState = 'GA';
 
   constructor(private screenService: ScreenService,
               public menuService: MenuService,
@@ -31,19 +34,32 @@ export class HeaderComponent implements OnInit {
         this.desktop = '';
       }
     });
+
+    const userInfo = StorageHelper.getLocal<UserInfoDto>(StorageKeys.userInfo);
+    this.userState = userInfo ? userInfo.state : 'GA';
   }
 
   saveLocation() {
-   // const userZip = this.changeLocationComponent.userZip;
     this.googleMapService.getAddressFromZip(this.userZip)
       .subscribe((address: GoogleMapAddressDto) => {
-        console.log('address...', address);
-        const stateAddress = address.address_components.find(ac => {
-          const stateType = ac.types.find(t => t === 'administrative_area_level_1');
-          return !!stateType;
-        });
-
-        this.userState = stateAddress.short_name;
+        this.userState = this.extractStateFromAddress(address);
+        this.saveUserInfoToStorage(this.userState);
       });
+  }
+
+  private saveUserInfoToStorage(state: string): void {
+    const userInfo = new UserInfoDto();
+
+    userInfo.state = state;
+    StorageHelper.setLocal(StorageKeys.userInfo, userInfo);
+  }
+
+  private extractStateFromAddress(address: GoogleMapAddressDto): string {
+    const stateAddress = address.address_components.find(ac => {
+      const stateType = ac.types.find(t => t === 'administrative_area_level_1');
+      return !!stateType;
+    });
+
+    return stateAddress.short_name;
   }
 }
