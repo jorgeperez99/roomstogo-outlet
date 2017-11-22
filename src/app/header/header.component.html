@@ -3,7 +3,8 @@
     {{ userState }}
   </button>
   <a class="store-locator-link" href="https://www.roomstogo.com/storelocator" target="_blank">
-    <span class="hidden-xs">Store Locator</span><i class="ion-android-pin store-locator-icon"></i>
+    <i class="ion-android-pin store-locator-icon"></i>
+    <span class="hidden-xs store-locator-text">Store Locator</span>
   </a>
 </ng-template>
 
@@ -26,26 +27,29 @@
     </div>
   </div>
   <div class="row logo-row">
-    <div class="col-xs-3 hidden-sm hidden-md hidden-lg">
+    <div class="col-xs-4 hidden-sm hidden-md hidden-lg">
       <span class="hamburger-close "
             [ngClass]="{'ion-android-menu': !menuService.isOpen, 'ion-android-close': menuService.isOpen}"
             (click)="menuService.toggleSideNav()"></span>
     </div>
-    <div class="logo-pane col-sm-offset-1 col-xs-6 col-sm-11">
+    <div class="logo-pane col-sm-offset-1 col-xs-4 col-sm-11">
       <img src="../../assets/images/logo.jpeg"  alt="Rooms TO Go Outlet Logo" title="Rooms TO Go Outlet Logo">
       <app-menu class="hidden-xs" *ngIf="!menuService.isVertical"></app-menu>
       <div class="hidden-xs store-locator-pane"><ng-container *ngTemplateOutlet="locatorLink"></ng-container></div>
     </div>
-    <div class="col-xs-3 hidden-sm hidden-lg hidden-md">
+    <div class="col-xs-4 hidden-sm hidden-lg hidden-md">
       <div class="store-locator-pane"><ng-container *ngTemplateOutlet="locatorLink"></ng-container></div>
     </div>
   </div>
 </header>
 
-<app-simple-modal  closeOnBodyClick="true"
-                   elementId="changeLocation"
+<app-simple-modal  elementId="changeLocation"
                    title="Change Location"
+                   [modalSize]="modalSizeEnum.Small"
                    (primaryBtnClick)="saveLocation()"
 >
-  <app-change-location [userState]="userState"></app-change-location>
+  <div class="location-modal">
+    <label for="zip">Your zip code</label>
+    <input class="form-control" name="zip" id="zip" type="text" placeholder="Zip Code" [(ngModel)]="userZip">
+  </div>
 </app-simple-modal>

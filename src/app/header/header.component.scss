@@ -102,8 +102,8 @@ header {
       }
 
       @include media-up-to(sm) {
-        margin: 8px auto;
-        @include img-keep-ratio-height(45px);
+        margin: 14px auto;
+        @include img-keep-ratio-height(36px);
       }
     }
   }
@@ -119,10 +119,45 @@ header {
 .store-locator-pane {
   position: absolute;
   right:15px;
+  top: -15px;
   color: $color-white;
-  font-size: 15px;
   background-color: $color-blue;
-  padding:3px 15px;
+  padding: 0px 9px;
+
+  @include media-up-to(sm) {
+    top: 0px;
+  }
+
+  a.store-locator-link {
+    display: inline-block;
+    text-align: center;
+    float: right;
+    padding-top: 10px;
+
+    @include media-up-to(sm) {
+      padding-top: 0;
+      float: none;
+    }
+
+    span.store-locator-text {
+      display: block;
+      font-size: 11px;
+    }
+
+    i.store-locator-icon {
+      font-size: 30px;
+      margin-left: 6px;
+      line-height: 29px;
+
+      @include media-up-to(sm) {
+        color: $color-blue;
+        margin-left: 0;
+        padding-left: 6px;
+        padding-top: 6px;
+        position: absolute;
+      }
+    }
+  }
 
   @include media-up-to(sm) {
     background-color: transparent;
@@ -130,33 +165,34 @@ header {
     position: relative;
   }
 
-  .store-locator-icon {
-    font-size: 30px;
-    margin-left: 6px;
-
-    @include media-up-to(sm) {
-      color: $color-blue;
-      margin-left: 0;
-      padding-left: 5px;
-      padding-top: 12px;
-      position: absolute;
-    }
-  }
-
   button.change-location {
     cursor: pointer;
-    color: $color-blue;
+    color: $color-white;
     font-weight: bold;
     background-repeat: no-repeat;
     background-position: 6px 7px;
     background-color: transparent;
     border: none;
-    width: 61px;
-    height: 61px;
+    width: 55px;
+    height: 58px;
     padding-left: 15px;
-    @include media-up-to(sm) {
+    display: inline-block;
+    float: left;
+    font-size: 25px;
+    margin-right: 10px;
 
+    @include media-up-to(sm) {
+      color: $color-blue;
+      margin: 6px 0 0 6px;
+      font-size: 20px;
     }
+  }
+}
+
+.location-modal {
+  label, input {
+    display: inline-block;
+    width: 80%;
   }
 }
 

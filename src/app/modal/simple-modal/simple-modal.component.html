@@ -14,13 +14,13 @@
 
 
 <div id="{{elementId}}" #modalContainer  class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
-  <div class="modal-dialog" [ngClass]="{'modal-sm': menuService.isVertical}">
+  <div class="modal-dialog" [ngClass]="{'modal-sm': modalSize == modalSizeEnum.Small, 'modal-lg': modalSize == modalSizeEnum.Large}">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">{{ title }}</h4>
       </div>
-      <div class="modal-body" [style.height]="modalBodyHeight">
+      <div class="modal-body">
         <ng-content></ng-content>
       </div>
       <div class="modal-footer">

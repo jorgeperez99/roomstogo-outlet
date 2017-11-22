@@ -5,6 +5,7 @@ import {ChangeLocationComponent} from '../change-location/change-location.compon
 import {ScreenService} from '../services/screen.service';
 import {GoogleMapService} from '../services/google-map.service';
 import {GoogleMapAddressDto} from '../models/dtos/googlemap.model';
+import {ModalSizeEnum} from '../modal/simple-modal/simple-modal.component';
 
 @Component({
   selector: 'app-header',
@@ -14,8 +15,9 @@ import {GoogleMapAddressDto} from '../models/dtos/googlemap.model';
 export class HeaderComponent implements OnInit {
   @ViewChild(ChangeLocationComponent) changeLocationComponent: ChangeLocationComponent;
   userState = 'FL';
+  userZip: number;
   desktop = '_desktop';
-
+  modalSizeEnum = ModalSizeEnum;
 
   constructor(private screenService: ScreenService,
               public menuService: MenuService,
@@ -34,8 +36,8 @@ export class HeaderComponent implements OnInit {
   }
 
   saveLocation() {
-    const userZip = this.changeLocationComponent.userZip;
-    this.googleMapService.getAddressFromZip(userZip)
+   // const userZip = this.changeLocationComponent.userZip;
+    this.googleMapService.getAddressFromZip(this.userZip)
       .subscribe((address: GoogleMapAddressDto) => {
         console.log('address...', address);
         const stateAddress = address.address_components.find(ac => {

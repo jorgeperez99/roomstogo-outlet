@@ -1,16 +1,7 @@
 @import "../../../assets/styles/variables";
 
 .modal {
-
-  .modal-dialog {
-
-    //&.vertical-middle {
-    //  position: fixed;
-    //  bottom: 50%;
-    //  right: 50%;
-    //  transform: translate(50%, 50%);
-    //}
-  }
+  background-color: $color-grey-transparent;
 }
 
 .modal-dialog {
@@ -22,13 +13,13 @@
 }
 
 .modal-body {
-  min-height: 250px;
+  min-height: 150px;
   overflow-y: scroll;
   display: flex;
   flex-direction: row;
 
   @include media-up-to(sm) {
-    min-height: 150px;
+
   }
 }
 

@@ -15,12 +15,12 @@
 
     @include media-up-to(lg) {
       padding: 7px 12px;
-      font-size: 12px;
+      font-size: 14px;
     }
 
     @include media-up-to(md) {
       padding: 7px 7px;
-      font-size: 10px;
+      font-size: 13px;
     }
 
     &:hover {
