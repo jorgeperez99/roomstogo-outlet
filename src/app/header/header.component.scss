@@ -153,7 +153,6 @@ header {
         color: $color-blue;
         margin-left: 0;
         padding-left: 6px;
-        padding-top: 6px;
         position: absolute;
       }
     }
@@ -183,7 +182,7 @@ header {
 
     @include media-up-to(sm) {
       color: $color-blue;
-      margin: 6px 0 0 6px;
+      margin: 3px 0 0 6px;
       font-size: 20px;
     }
   }
