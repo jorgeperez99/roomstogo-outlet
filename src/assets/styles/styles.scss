@@ -43,6 +43,10 @@ input[type="button"], input[type="button"]:focus, input[type="button"]::-moz-foc
   outline: none;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 //bootstrap override
 .btn {
   border-radius: 0;

@@ -19,6 +19,7 @@
   img {
     float: right;
     margin: 10px;
+    @include img-keep-ratio-height(200px);
   }
 }
 

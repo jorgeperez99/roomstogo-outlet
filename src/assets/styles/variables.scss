@@ -23,8 +23,10 @@ $mobile-switch-site-height: 25px;
 $logo-row-height: 94px;
 $mobile-logo-row-height: 68px;
 
+$mobile-header-sales-height: 35px;
+
 $header-fixed-height: $switch-site-height + $logo-row-height;
-$mobile-header-fixed-height: $mobile-switch-site-height + $mobile-logo-row-height;
+$mobile-header-fixed-height: $mobile-switch-site-height + $mobile-header-sales-height + $mobile-logo-row-height;
 
 $vertical-menu-width: 75%;
 $vertical-menu-animation-duration: 150ms;

@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import { MenuService } from '../../services/menu.service';
+import {MenuItemDto} from '../../models/dtos/menuitem.model';
 
 @Component({
   selector: 'app-menu',
@@ -7,6 +8,27 @@ import { MenuService } from '../../services/menu.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+
+  weeklySpecialItem: MenuItemDto =
+    {
+      text: 'Weekly Special',
+      icon: '',
+      route: 'flier',
+      submenu: [
+        {
+          text: 'Weekly Pritable Ad',
+          icon: '',
+          route: 'filer/weekly',
+          submenu: null
+        },
+        {
+          text: 'Matress Pritable Ad',
+          icon: '',
+          route: 'flier/matress',
+          submenu: null
+        }],
+      submenuLink: './assets/images/cyberMonday.png'
+    };
 
   constructor(public menuService: MenuService) { }
 

@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import  {SalesComponent} from './header/sales/sales.component';
 import { FlierComponent } from './flier/flier.component';
 import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menuitem/menuitem.component';
@@ -21,8 +22,7 @@ import {JQ_TOKEN} from './services/jquery.service';
 import {SimpleModalComponent} from './modal/simple-modal/simple-modal.component';
 import { ModalTriggerDirective } from './modal/modal-trigger.directive';
 import {HttpService} from './services/http.service';
-import {GoogleMapService} from './services/google-map.service';
-
+import {MapService} from './services/map.service';
 
 declare let jQuery: Object;
 
@@ -37,6 +37,7 @@ export function httpService(
   declarations: [
     AppComponent,
     HeaderComponent,
+    SalesComponent,
     FlierComponent,
     MenuComponent,
     MenuItemComponent,
@@ -58,7 +59,7 @@ export function httpService(
     ScreenService,
     MenuService,
     DetailService,
-    GoogleMapService,
+    MapService,
     { provide: JQ_TOKEN, useFactory: jQueryFactory },
     { provide: HttpService, useFactory: httpService, deps: [XHRBackend, RequestOptions] }
   ],

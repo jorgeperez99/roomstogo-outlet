@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { GoogleMapService } from './google-map.service';
+import { MapService } from './map.service';
 
-describe('GoogleMapService', () => {
+describe('MapService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [GoogleMapService]
+      providers: [MapService]
     });
   });
 
-  it('should be created', inject([GoogleMapService], (service: GoogleMapService) => {
+  it('should be created', inject([MapService], (service: MapService) => {
     expect(service).toBeTruthy();
   }));
 });

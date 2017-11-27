@@ -1,5 +1,6 @@
 [
-  { "path": "flier", "component": "FlierComponent"},
+  { "path": "flier/weekly", "component": "FlierComponent"},
+  { "path": "flier/matress", "component": "FlierComponent"},
   { "path": "discount-living-rooms/sofas", "component": "DetailComponent"},
   { "path": "discount-living-rooms/sleeper-sofas", "component": "DetailComponent"},
   { "path": "discount-dining-rooms/dining-room-sets", "component": "DetailComponent"},

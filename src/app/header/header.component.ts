@@ -2,11 +2,12 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import { WindowRefService } from '../services/window-ref.service';
 import { MenuService } from '../services/menu.service';
 import {ScreenService} from '../services/screen.service';
-import {GoogleMapService} from '../services/google-map.service';
+import {MapService} from '../services/map.service';
 import {GoogleMapAddressDto} from '../models/dtos/googlemap.model';
 import {ModalSizeEnum} from '../modal/simple-modal/simple-modal.component';
 import {StorageHelper, StorageKeys} from '../helpers/storage.helper';
 import {UserInfoDto} from '../models/dtos/user.model';
+import {MenuItemDto} from '../models/dtos/menuitem.model';
 
 @Component({
   selector: 'app-header',
@@ -17,12 +18,11 @@ export class HeaderComponent implements OnInit {
   userZip: number;
   desktop = '_desktop';
   modalSizeEnum = ModalSizeEnum;
-
   userState = 'GA';
 
   constructor(private screenService: ScreenService,
               public menuService: MenuService,
-              private googleMapService: GoogleMapService ) {
+              private googleMapService: MapService ) {
 
   }
 

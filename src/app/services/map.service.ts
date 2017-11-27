@@ -10,7 +10,7 @@ import {Http} from '@angular/http';
 import {GoogleMapAddressDto} from '../models/dtos/googlemap.model';
 
 @Injectable()
-export class GoogleMapService {
+export class MapService {
 
   constructor(private http: Http) {
 

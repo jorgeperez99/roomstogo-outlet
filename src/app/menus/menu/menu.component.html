@@ -1,5 +1,12 @@
 <nav (click)="navClicked($event);">
   <ul>
+    <li>
+      <app-menu-item
+        [item]="weeklySpecialItem"
+        [ngClass]="{'vertical-menu': menuService.isVertical }"
+        [menuIndex]="0"
+      ></app-menu-item>
+    </li>
     <li *ngFor="let item of menuService.items; let i = index;">
       <app-menu-item
         [item]="item"
