@@ -13,7 +13,7 @@ ng serve
 ```
 ## Sample
 ### Dynamic routes
-The service will load the routes and they will be loaded dynamically.
+The service will load the routes and they will be loaded dynamically.  The RouterModule.forRoot([]) is called to initialize the router
 
 **app.module.ts**
 ```
@@ -43,4 +43,30 @@ The service will load the routes and they will be loaded dynamically.
   entryComponents: [ DetailComponent, FlierComponent ]
 })
 export class AppModule { }
+```
+**app.routing.ts**
+This file is not a class. it just holds the creation of a constant
+```
+import {Routes} from '@angular/router';
+import { FlierComponent } from './flier/flier.component';
+import {DetailComponent} from './detail/detail.component';
+
+export const appRoutes: Routes = [
+  { path: 'flier', component: FlierComponent},
+  { path: 'discount-living-rooms/sofas', component: DetailComponent},
+  { path: 'discount-living-rooms/sleeper-sofas', component: DetailComponent},
+  { path: 'discount-dining-rooms/dining-room-sets', component: DetailComponent},
+  { path: 'discount-dining-rooms/tables', component: DetailComponent},
+  { path: 'discount-bedrooms/bedroom-sets', component: DetailComponent},
+  { path: 'discount-bedrooms/queen-bedroom-sets', component: DetailComponent},
+  { path: 'discount-leather/sofas', component: DetailComponent},
+  { path: 'discount-leather/leather-loveseats', component: DetailComponent},
+  { path: 'discount-mattress/queen-mattresses', component: DetailComponent},
+  { path: 'discount-mattress/king-mattresses', component: DetailComponent},
+  { path: 'discount-home-decor/lamps', component: DetailComponent},
+  { path: 'discount-home-decor/rugs', component: DetailComponent},
+
+  { path: '', component: FlierComponent},
+  { path: '**', component: FlierComponent},
+];
 ```
