@@ -15,6 +15,7 @@ ng serve
 ### Dynamic routes
 The service will load the routes and they will be loaded dynamically.
 
+**app.module.ts**
 ```
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ The service will load the routes and they will be loaded dynamically.
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot([])
+    **RouterModule.forRoot([])**
   ],
   providers: [
     RouteService,
