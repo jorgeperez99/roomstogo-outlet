@@ -30,7 +30,7 @@ The service will load the routes and they will be loaded dynamically.
   imports: [
     BrowserModule,
     HttpModule,
-    **RouterModule.forRoot([])**
+    RouterModule.forRoot([])
   ],
   providers: [
     RouteService,
