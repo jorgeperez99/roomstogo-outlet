@@ -14,3 +14,32 @@ ng serve
 ## Sample
 ### Dynamic routes
 The service will load the routes and they will be loaded dynamically.
+
+```
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FlierComponent,
+    MenuComponent,
+    MenuItemComponent,
+    PopupMenuComponent,
+    DetailComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    RouterModule.forRoot([])
+  ],
+  providers: [
+    RouteService,
+    WindowRefService,
+    ScreenService,
+    MenuService,
+    DetailService
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [ DetailComponent, FlierComponent ]
+})
+export class AppModule { }
+```
